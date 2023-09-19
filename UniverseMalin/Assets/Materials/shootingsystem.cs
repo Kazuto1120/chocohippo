@@ -46,7 +46,8 @@ public class shootingsystem : MonoBehaviour
             }
         }
         Instantiate(buttethole, rayhit.point, Quaternion.FromToRotation(Vector3.forward, rayhit.normal));
-        Instantiate(muzzleFlash, attactpoint.position, Quaternion.identity);
+        
+        Instantiate(muzzleFlash, attactpoint.position, Quaternion.LookRotation(camera.transform.forward));
         fuelleft--;
         Invoke("resetshot", timebetweenshots);
     }
