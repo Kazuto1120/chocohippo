@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class shootingsystem : MonoBehaviour
 {
+    public AudioSource src;
     public int damage;
     public float spread, range, timebetweenshots;
     public int fuel = 100;
@@ -45,6 +46,7 @@ public class shootingsystem : MonoBehaviour
                 rayhit.collider.GetComponent<movement>().Takedamage(damage);
             }
         }
+        src.Play();
         Instantiate(buttethole, rayhit.point, Quaternion.FromToRotation(Vector3.forward, rayhit.normal));
         
         Instantiate(muzzleFlash, attactpoint.position, Quaternion.LookRotation(camera.transform.forward));
