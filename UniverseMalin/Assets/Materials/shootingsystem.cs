@@ -37,7 +37,7 @@ public class shootingsystem : MonoBehaviour
 
         Vector3 direction = camera.transform.forward + new Vector3(x, y, 0);
         
-        if (Physics.Raycast(camera.transform.position, camera.transform.forward, out rayhit, range, enemy))
+        if (Physics.Raycast(camera.transform.position, direction, out rayhit, range, enemy))
         {
             Debug.Log(rayhit.collider.name);
             if (rayhit.collider.CompareTag("enemy"))
@@ -45,7 +45,7 @@ public class shootingsystem : MonoBehaviour
                 rayhit.collider.GetComponent<movement>().Takedamage(damage);
             }
         }
-        Instantiate(buttethole, rayhit.point, Quaternion.Euler(0, 0, 0));
+        Instantiate(buttethole, rayhit.point, Quaternion.FromToRotation(Vector3.forward, rayhit.normal));
         Instantiate(muzzleFlash, attactpoint.position, Quaternion.identity);
         fuelleft--;
         Invoke("resetshot", timebetweenshots);
