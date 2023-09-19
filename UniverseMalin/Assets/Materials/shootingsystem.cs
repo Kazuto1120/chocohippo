@@ -6,7 +6,7 @@ public class shootingsystem : MonoBehaviour
 {
     public AudioSource src;
     public int damage;
-    public float spread, range, timebetweenshots;
+    public float spread, range, timebetweenshots, tempspread, spreadincrement, spreadResetTime,spreadResetRemain;
     public int fuel = 100;
     public bool rapid , readytoshoot;
     int fuelleft;
@@ -21,20 +21,37 @@ public class shootingsystem : MonoBehaviour
     {
         fuelleft = fuel;
         readytoshoot = true;
+        tempspread = spread;
+        spreadResetRemain = 0;
+        
     }
-    private void Update()
+    
+
+    private void FixedUpdate()
     {
         if (readytoshoot == true &&fuelleft>0&& Input.GetKey(KeyCode.Mouse0))
         {
             shoot();
+            if(tempspread < spread * 8)
+            tempspread += spreadincrement;
         }
+        if (spreadResetRemain > 0f)
+        {
+            spreadResetRemain -= Time.deltaTime;
+
+            
+        }
+        else
+        tempspread = spread;
     }
+
 
     private void shoot()
     {
         readytoshoot = false;
-        float x = Random.Range(-spread, spread);
-        float y = Random.Range(-spread, spread);
+
+        float x = Random.Range(-tempspread, tempspread);
+        float y = Random.Range(-tempspread, tempspread);
 
         Vector3 direction = camera.transform.forward + new Vector3(x, y, 0);
         
@@ -46,6 +63,7 @@ public class shootingsystem : MonoBehaviour
                 rayhit.collider.GetComponent<movement>().Takedamage(damage);
             }
         }
+        spreadResetRemain = spreadResetTime;
         src.Play();
         Instantiate(buttethole, rayhit.point, Quaternion.FromToRotation(Vector3.forward, rayhit.normal));
         
@@ -57,5 +75,6 @@ public class shootingsystem : MonoBehaviour
     {
         readytoshoot = true;
     }
+    
 
 }
