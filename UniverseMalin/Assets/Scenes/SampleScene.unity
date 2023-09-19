@@ -3064,7 +3064,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.63, z: 0}
+  m_LocalPosition: {x: 0, y: 1.63, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3083,7 +3083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03728ca40861a874cb9a75c51dcba0ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 200
+  sensitivity: 300
   MainBody: {fileID: 1251091565}
 --- !u!43 &1181351917
 Mesh:
@@ -3349,6 +3349,7 @@ MonoBehaviour:
   gravity: -9.81
   jumpheight: 1
   walkspeed: 5
+  air: 0
   groundedCheck: {fileID: 1812183929}
   groundDistance: 0.4
   ground:

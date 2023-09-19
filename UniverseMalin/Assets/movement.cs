@@ -10,6 +10,7 @@ public class movement : MonoBehaviour
     public float gravity = -9.81f;
     public float jumpheight = 3f;
     public float walkspeed = 5f;
+    public bool air = false;
     
     public Transform groundedCheck;
     public float groundDistance = 0.4f;
@@ -33,6 +34,7 @@ public class movement : MonoBehaviour
         if (isGrounded)
         {
             body.GetComponent<Animator>().SetBool("jump", false);
+            air = false;
         }
         if(isGrounded && velocity.y < 0)
         {
@@ -67,11 +69,18 @@ public class movement : MonoBehaviour
         if (Input.GetKey(jumpkey) && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpheight * -2f * gravity);
-            body.GetComponent<Animator>().SetBool("jump", true);
+            if (!air){
+                body.GetComponent<Animator>().SetBool("jump", true);
+                air = true;
+            }
         }
 
         velocity.y += gravity * Time.deltaTime;
 
         player.Move(velocity * Time.deltaTime);
+    }
+    public void Takedamage(int damage)
+    {
+
     }
 }
