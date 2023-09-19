@@ -27,4 +27,15 @@ public class playerlook : MonoBehaviour
         MainBody.Rotate(Vector3.up * mouseX);
 
     }
+    public void Cameramove(float temp)
+    {
+        xRotation -= temp;
+        SmoothCameraRotation();
+    }
+    private void SmoothCameraRotation()
+    {
+        Quaternion targetRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, 5f * Time.deltaTime);
+    }
+
 }

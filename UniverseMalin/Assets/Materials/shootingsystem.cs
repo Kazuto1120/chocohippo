@@ -6,7 +6,7 @@ public class shootingsystem : MonoBehaviour
 {
     public AudioSource src;
     public int damage;
-    public float spread, range, timebetweenshots, tempspread, spreadincrement, spreadResetTime,spreadResetRemain;
+    public float spread, range, timebetweenshots, tempspread, spreadincrement, spreadResetTime,spreadResetRemain, cameraRotationAngle;
     public int fuel = 100;
     public bool rapid , readytoshoot;
     int fuelleft;
@@ -32,7 +32,7 @@ public class shootingsystem : MonoBehaviour
         if (readytoshoot == true &&fuelleft>0&& Input.GetKey(KeyCode.Mouse0))
         {
             shoot();
-            if(tempspread < spread * 8)
+            if(tempspread < spread * 5)
             tempspread += spreadincrement;
         }
         if (spreadResetRemain > 0f)
@@ -66,7 +66,7 @@ public class shootingsystem : MonoBehaviour
         spreadResetRemain = spreadResetTime;
         src.Play();
         Instantiate(buttethole, rayhit.point, Quaternion.FromToRotation(Vector3.forward, rayhit.normal));
-        
+        RotateCameraUp();
         Instantiate(muzzleFlash, attactpoint.position, Quaternion.LookRotation(camera.transform.forward));
         fuelleft--;
         Invoke("resetshot", timebetweenshots);
@@ -75,6 +75,11 @@ public class shootingsystem : MonoBehaviour
     {
         readytoshoot = true;
     }
-    
+    private void RotateCameraUp()
+    {
+        camera.GetComponent<playerlook>().Cameramove(-(cameraRotationAngle/2));
+        camera.GetComponent<playerlook>().Cameramove(cameraRotationAngle);
+    }
+
 
 }
