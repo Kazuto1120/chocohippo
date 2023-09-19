@@ -32,7 +32,7 @@ public class shootingsystem : MonoBehaviour
         if (readytoshoot == true &&fuelleft>0&& Input.GetKey(KeyCode.Mouse0))
         {
             shoot();
-            if(tempspread < spread * 5)
+            if(tempspread < spread * 50)
             tempspread += spreadincrement;
         }
         if (spreadResetRemain > 0f)
@@ -53,8 +53,8 @@ public class shootingsystem : MonoBehaviour
         float x = Random.Range(-tempspread, tempspread);
         float y = Random.Range(-tempspread, tempspread);
 
-        Vector3 direction = camera.transform.forward + new Vector3(x, y, 0);
-        
+        Vector3 direction = Quaternion.Euler(x, y, 0f) * camera.transform.forward;
+
         if (Physics.Raycast(camera.transform.position, direction, out rayhit, range, enemy))
         {
             Debug.Log(rayhit.collider.name);

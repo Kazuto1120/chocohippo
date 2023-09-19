@@ -28,7 +28,7 @@ public class movement : MonoBehaviour
     {
         player = gameObject.GetComponent<CharacterController>();
     }
-    private void Update()
+    private void FixedUpdate()
     {
         isGrounded = Physics.CheckSphere(groundedCheck.position, groundDistance, ground);
         if (isGrounded)
