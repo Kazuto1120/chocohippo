@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
-public class shootingsystem : MonoBehaviour
+public class shootingsystem : MonoBehaviourPunCallbacks
 {
     public AudioSource src;
     public int damage;
@@ -15,6 +16,8 @@ public class shootingsystem : MonoBehaviour
     public Transform attactpoint;
     public RaycastHit rayhit;
     public LayerMask enemy;
+    public PhotonView views;
+
 
     public GameObject muzzleFlash, buttethole;
     private void Awake()
@@ -25,24 +28,28 @@ public class shootingsystem : MonoBehaviour
         spreadResetRemain = 0;
         
     }
-    
+
+
 
     private void FixedUpdate()
     {
-        if (readytoshoot == true &&fuelleft>0&& Input.GetKey(KeyCode.Mouse0))
+        if (views.IsMine)
         {
-            shoot();
-            if(tempspread < spread * 50)
-            tempspread += spreadincrement;
-        }
-        if (spreadResetRemain > 0f)
-        {
-            spreadResetRemain -= Time.deltaTime;
+            if (readytoshoot == true && fuelleft > 0 && Input.GetKey(KeyCode.Mouse0))
+            {
+                shoot();
+                if (tempspread < spread * 50)
+                    tempspread += spreadincrement;
+            }
+            if (spreadResetRemain > 0f)
+            {
+                spreadResetRemain -= Time.deltaTime;
 
-            
+
+            }
+            else
+                tempspread = spread;
         }
-        else
-        tempspread = spread;
     }
 
 

@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
-public class playerlook : MonoBehaviour
+public class playerlook : MonoBehaviourPunCallbacks
 {
     public float sensitivity = 50f;
     public Transform MainBody;
@@ -11,6 +12,10 @@ public class playerlook : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (!photonView.IsMine)
+        {
+            gameObject.SetActive(false);
+        }
         Cursor.lockState = CursorLockMode.Locked;
     }
 
