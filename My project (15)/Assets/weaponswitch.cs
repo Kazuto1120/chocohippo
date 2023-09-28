@@ -5,6 +5,11 @@ using UnityEngine;
 public class weaponswitch : MonoBehaviour
 {
     public int weaponSelected = 0;
+    public GameObject scopeoverlay;
+    public Camera maincamera;
+    public Camera camera;
+
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +46,31 @@ public class weaponswitch : MonoBehaviour
         {
             selectweapon();
         }
+        if(weaponSelected == 2 && Input.GetButtonDown("Fire2"))
+        {
+            animator.SetBool("scoping", !animator.GetBool("scoping"));
+            if (animator.GetBool("scoping"))
+            {
+                StartCoroutine(onscope());
+            }
+            else
+            {
+                unscope();
+            }
+        }
+    }
+    void unscope()
+    {
+        camera.enabled = true;
+        scopeoverlay.SetActive(false);
+        maincamera.fieldOfView = 60f;
+    }
+    IEnumerator onscope()
+    {
+        yield return new WaitForSeconds(.25f);
+        camera.enabled = false;
+        scopeoverlay.SetActive(true);
+        maincamera.fieldOfView = 15f;
     }
     void selectweapon()
     {
@@ -49,7 +79,12 @@ public class weaponswitch : MonoBehaviour
         {
             if(i == weaponSelected)
             {
+                animator.SetBool("scoping", false);
+                unscope();
+                animator.SetFloat("gunnum",weapon.gameObject.GetComponent<riflescript>().gunnumber);
+                animator.SetTrigger("switch");
                 weapon.gameObject.SetActive(true);
+                
             }
             else
             {

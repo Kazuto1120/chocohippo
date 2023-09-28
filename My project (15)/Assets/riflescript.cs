@@ -36,6 +36,7 @@ public class riflescript : MonoBehaviour
 
     private void FixedUpdate()
     {
+        
         if (Time.time - timeSinceLastShot > spreadResetDelay)
         {
             ResetSpread();
@@ -54,6 +55,7 @@ public class riflescript : MonoBehaviour
         {
             reload();
         }
+        
     }
     void shoot()
     {
