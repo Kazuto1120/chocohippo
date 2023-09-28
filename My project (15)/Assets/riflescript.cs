@@ -12,6 +12,7 @@ public class riflescript : MonoBehaviour
     public float spreadIncreasePerShot = 0.05f; 
     public float spreadResetDelay = 1f;
     public float gunnumber;
+    public float bulletpershot = 1f;
 
     public Camera camera;
     public ParticleSystem muzzleflash;
@@ -63,16 +64,19 @@ public class riflescript : MonoBehaviour
         sound.Play();
         StartCoroutine(camerashake.Shake(.2f,.1f));
         RaycastHit hit;
-        Vector3 bulletDirection = CalculateBulletDirection();
-        if (Physics.Raycast(camera.transform.position, bulletDirection, out hit, range))
+        for (float i = 0; i < bulletpershot; ++i)
         {
-            Debug.Log(hit.transform.name);
-            Debug.DrawLine(camera.transform.position, hit.point, Color.red, 2.0f);
-            Instantiate(impact, hit.point, Quaternion.LookRotation(hit.normal));
+            Vector3 bulletDirection = CalculateBulletDirection();
+            if (Physics.Raycast(camera.transform.position, bulletDirection, out hit, range))
+            {
+                Debug.Log(hit.transform.name);
+                Debug.DrawLine(camera.transform.position, hit.point, Color.red, 2.0f);
+                Instantiate(impact, hit.point, Quaternion.LookRotation(hit.normal));
+            }
+            bulletremain--;
+            currentSpread = Mathf.Min(currentSpread + spreadIncreasePerShot, maxSpread);
+            timeSinceLastShot = Time.time;
         }
-        bulletremain--;
-        currentSpread = Mathf.Min(currentSpread + spreadIncreasePerShot, maxSpread);
-        timeSinceLastShot = Time.time;
     }
     private void reload()
     {
