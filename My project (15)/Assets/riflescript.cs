@@ -75,7 +75,8 @@ public class riflescript : MonoBehaviour
     {
         abletofire = false;
         bulletremain = bullet;
-        playerMovement.reloadplay();
+        animator.SetBool("reload", true);
+        StartCoroutine(ResetReloadParameter(1f));
         StartCoroutine(abletofired(2f));
         
     }
@@ -93,6 +94,12 @@ public class riflescript : MonoBehaviour
         bulletDirection.y += randomSpreadY;
 
         return bulletDirection.normalized;
+    }
+    private IEnumerator ResetReloadParameter(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        animator.SetBool("reload", false);
     }
     private IEnumerator abletofired(float delay)
     {
