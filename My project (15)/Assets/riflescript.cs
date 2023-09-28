@@ -10,7 +10,8 @@ public class riflescript : MonoBehaviour
     public float bullet = 50f;
     public float maxSpread = .5f; 
     public float spreadIncreasePerShot = 0.05f; 
-    public float spreadResetDelay = 1f; 
+    public float spreadResetDelay = 1f;
+    public float gunnumber;
 
     public Camera camera;
     public ParticleSystem muzzleflash;
