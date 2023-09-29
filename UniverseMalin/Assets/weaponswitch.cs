@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
-using Hashtable = ExitGames.Client.Photon.Hashtable;
 using Photon.Realtime;
 
 public class weaponswitch : MonoBehaviourPunCallbacks
@@ -51,12 +50,7 @@ public class weaponswitch : MonoBehaviourPunCallbacks
             if (previousweapon != weaponSelected)
             {
                 selectweapon();
-            if (photonView.IsMine)
-            {
-                Hashtable hash = new Hashtable();
-                hash.Add("weaponSelected", weaponSelected);
-                PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
-            }
+            
 
             }
             if (weaponSelected == 2 && Input.GetButtonDown("Fire2"))
@@ -73,13 +67,7 @@ public class weaponswitch : MonoBehaviourPunCallbacks
             }
         
     }
-    public override void OnPlayerPropertiesUpdate(Player targetPlayer, Hashtable changedProps)
-    {
-        if (!photonView.IsMine)
-        {
-            selectweapon1((float)changedProps["weaponSelected"]);
-        }
-    }
+   
     void unscope()
     {
         camera.enabled = true;
@@ -114,25 +102,5 @@ public class weaponswitch : MonoBehaviourPunCallbacks
             i++;
         }
     }
-    void selectweapon1( float x)
-    {
-        int i = 0;
-        foreach (Transform weapon in transform)
-        {
-            if (i == x)
-            {
-                animator.SetBool("scoping", false);
-                unscope();
-                animator.SetFloat("gunnum", weapon.gameObject.GetComponent<riflescript>().gunnumber);
-                animator.SetTrigger("switch");
-                weapon.gameObject.SetActive(true);
-
-            }
-            else
-            {
-                weapon.gameObject.SetActive(false);
-            }
-            i++;
-        }
-    }
+    
 }
