@@ -27,6 +27,8 @@ public class weaponswitch : MonoBehaviourPunCallbacks
             return;}
         if (!transform.GetChild(weaponSelected).GetComponent<riflescript>().abletofire)
         {
+            unscope();
+            animator.SetBool("scoping", false);
             return;
         }
             int previousweapon = weaponSelected;
