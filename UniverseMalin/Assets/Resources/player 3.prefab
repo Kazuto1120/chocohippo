@@ -49425,7 +49425,7 @@ MonoBehaviour:
   scopeoverlay: {fileID: 1742149660917735519}
   maincamera: {fileID: 1692474069779646487}
   camera: {fileID: 6892048672026471944}
-  view: {fileID: 0}
+  view: {fileID: 8303318337367412925}
   animator: {fileID: 1742149661031223019}
 --- !u!114 &8303318337367412925
 MonoBehaviour:
@@ -49842,7 +49842,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.01
-  far clip plane: 1000
+  far clip plane: 50
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -49922,7 +49922,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.01
-  far clip plane: 1000
+  far clip plane: 200
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -50252,7 +50252,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -2190, y: 118}
+  m_AnchoredPosition: {x: -1799, y: 118}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1885272296041467937
@@ -50328,7 +50328,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -2190, y: 118}
+  m_AnchoredPosition: {x: -1799, y: 118}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2812991256880565936

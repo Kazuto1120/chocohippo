@@ -17,7 +17,7 @@ public class weaponswitch : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        selectweapon();
+        view.RPC("selectweapon", RpcTarget.AllBuffered, weaponSelected);
     }
 
     // Update is called once per frame
@@ -54,7 +54,7 @@ public class weaponswitch : MonoBehaviourPunCallbacks
             }
             if (previousweapon != weaponSelected)
             {
-                selectweapon();
+            view.RPC("selectweapon", RpcTarget.AllBuffered, weaponSelected);
             
 
             }
@@ -75,9 +75,12 @@ public class weaponswitch : MonoBehaviourPunCallbacks
    
     void unscope()
     {
-        camera.enabled = true;
-        scopeoverlay.SetActive(false);
-        maincamera.fieldOfView = 60f;
+        if (view.IsMine)
+        {
+            camera.enabled = true;
+            scopeoverlay.SetActive(false);
+            maincamera.fieldOfView = 60f;
+        }
     }
     IEnumerator onscope()
     {
@@ -86,26 +89,31 @@ public class weaponswitch : MonoBehaviourPunCallbacks
         scopeoverlay.SetActive(true);
         maincamera.fieldOfView = 15f;
     }
-    void selectweapon()
+    [PunRPC]
+    void selectweapon(int x)
     {
+        Debug.Log("select function called");
         int i = 0;
-        foreach (Transform weapon in transform)
-        {
-            if(i == weaponSelected)
+        
+            foreach (Transform weapon in transform)
             {
-                animator.SetBool("scoping", false);
-                unscope();
-                animator.SetFloat("gunnum",weapon.gameObject.GetComponent<riflescript>().gunnumber);
-                animator.SetTrigger("switch");
-                weapon.gameObject.SetActive(true);
-                
+                if (i == x)
+                {
+                    animator.SetBool("scoping", false);
+                    unscope();
+                    animator.SetFloat("gunnum", weapon.gameObject.GetComponent<riflescript>().gunnumber);
+                    animator.SetTrigger("switch");
+                    weapon.gameObject.SetActive(true);
+
+                }
+                else
+                {
+                    weapon.gameObject.SetActive(false);
+                }
+                i++;
             }
-            else
-            {
-                weapon.gameObject.SetActive(false);
-            }
-            i++;
-        }
+        
+        
     }
     
 }
