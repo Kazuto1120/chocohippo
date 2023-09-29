@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.UI;
 
 public class riflescript : MonoBehaviourPunCallbacks
 {
@@ -22,19 +23,21 @@ public class riflescript : MonoBehaviourPunCallbacks
     public AudioSource sound;
     public playerMovement playerMovement;
     public Animator animator;
+    public Image ammobar;
 
 
     public KeyCode shootkey = KeyCode.Mouse0;
 
     private float timetillfire = 0f;
     private float bulletremain = 0f;
-    private bool abletofire = true;
+    public bool abletofire = true;
     private float currentSpread = 0f;  
     private float timeSinceLastShot = 0f; 
     private void Start()
     {
         
         bulletremain = bullet;
+        
     }
 
     private void FixedUpdate()
@@ -42,7 +45,7 @@ public class riflescript : MonoBehaviourPunCallbacks
         if (photonView.IsMine)
         {
 
-
+            ammocircle();
 
             if (Time.time - timeSinceLastShot > spreadResetDelay)
             {
@@ -67,6 +70,7 @@ public class riflescript : MonoBehaviourPunCallbacks
     }
     void shoot()
     {
+        
         muzzleflash.Emit(1);
         sound.Play();
         StartCoroutine(camerashake.Shake(.2f,.1f));
@@ -77,7 +81,12 @@ public class riflescript : MonoBehaviourPunCallbacks
             if (Physics.Raycast(camera.transform.position, bulletDirection, out hit, range))
             {
                 Debug.Log(hit.transform.name);
-                Debug.DrawLine(camera.transform.position, hit.point, Color.red, 2.0f);
+                
+                enemeysystem enemey = hit.transform.GetComponent<enemeysystem>();
+                if (enemey != null)
+                {
+                    enemey.takedamage(damage);
+                }
                 PhotonNetwork.Instantiate(impact.name, hit.point, Quaternion.LookRotation(hit.normal));
             }
             bulletremain--;
@@ -97,6 +106,10 @@ public class riflescript : MonoBehaviourPunCallbacks
     void ResetSpread()
     {
         currentSpread = 0f;
+    }
+    private void ammocircle()
+    {
+        ammobar.fillAmount = bulletremain / bullet;
     }
     Vector3 CalculateBulletDirection()
     {

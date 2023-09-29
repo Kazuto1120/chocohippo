@@ -10,6 +10,7 @@ public class weaponswitch : MonoBehaviourPunCallbacks
     public GameObject scopeoverlay;
     public Camera maincamera;
     public Camera camera;
+    public PhotonView view;
     
 
     public Animator animator;
@@ -24,6 +25,10 @@ public class weaponswitch : MonoBehaviourPunCallbacks
     {
         if (!photonView.IsMine) { 
             return;}
+        if (!transform.GetChild(weaponSelected).GetComponent<riflescript>().abletofire)
+        {
+            return;
+        }
             int previousweapon = weaponSelected;
             if (Input.GetAxis("Mouse ScrollWheel") > 0f)
             {

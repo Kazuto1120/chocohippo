@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.UI;
 
 public class playerMovement : MonoBehaviour
 {
+    public Image healthcircle;
     private float speed;
-    public float health = 100;
+    public float Maxhealth = 100f;
+    public float health;
     public CharacterController player;
     public GameObject body;
     public float gravity = -9.81f;
@@ -32,8 +35,10 @@ public class playerMovement : MonoBehaviour
 
     private void Start()
     {
+        health = Maxhealth;
         view = GetComponent<PhotonView>();
         player = gameObject.GetComponent<CharacterController>();
+        healthCircle();
     }
     private void FixedUpdate()
     {
@@ -111,10 +116,20 @@ public class playerMovement : MonoBehaviour
         // After the specified delay, reset the "reload" parameter to false.
         animator.SetBool("reload", false);
     }
+    void healthCircle()
+    {
+        healthcircle.fillAmount = health / Maxhealth; 
+    }
 
 
     public void Takedamage(int damage)
     {
+        health = health - damage;
+        healthCircle();
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
 
     }
 }
