@@ -15,6 +15,8 @@ public class riflescript : MonoBehaviourPunCallbacks
     public float spreadResetDelay = 1f;
     public float gunnumber;
     public float bulletpershot = 1f;
+    public float camerashakeMagnitude = 0;
+    public float camerashakeDuration = 0;
 
     public Camera camera;
     public ParticleSystem muzzleflash;
@@ -73,7 +75,7 @@ public class riflescript : MonoBehaviourPunCallbacks
         
         muzzleflash.Emit(1);
         sound.Play();
-        StartCoroutine(camerashake.Shake(.2f,.1f));
+        StartCoroutine(camerashake.Shake(camerashakeDuration,camerashakeMagnitude));
         RaycastHit hit;
         for (float i = 0; i < bulletpershot; ++i)
         {

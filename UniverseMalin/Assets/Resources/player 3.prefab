@@ -49749,6 +49749,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1742149661356108807}
   - component: {fileID: 7324226129002368542}
+  - component: {fileID: 6577854096512652567}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -49786,6 +49787,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensitivity: 500
   MainBody: {fileID: 1742149660250355640}
+--- !u!114 &6577854096512652567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742149661356108808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964dc066f23fd4247b7e757524c15500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 3933778176993259268}
 --- !u!1 &3757379425297391547
 GameObject:
   m_ObjectHideFlags: 0
@@ -50573,6 +50587,8 @@ MonoBehaviour:
   spreadResetDelay: 1
   gunnumber: 2
   bulletpershot: 1
+  camerashakeMagnitude: 0.3
+  camerashakeDuration: 0.6
   camera: {fileID: 1692474069779646487}
   muzzleflash: {fileID: 1940241049029263974}
   impact: {fileID: 1929180936678203488, guid: 0386487f854a5774b84e45e6b65bd138, type: 3}
@@ -50809,6 +50825,8 @@ MonoBehaviour:
   spreadResetDelay: 2
   gunnumber: 3
   bulletpershot: 1
+  camerashakeMagnitude: 0.1
+  camerashakeDuration: 0.5
   camera: {fileID: 1692474069779646487}
   muzzleflash: {fileID: 1940241049748299936}
   impact: {fileID: 1929180936678203488, guid: 0386487f854a5774b84e45e6b65bd138, type: 3}
@@ -51044,6 +51062,8 @@ MonoBehaviour:
   spreadResetDelay: 1
   gunnumber: 4
   bulletpershot: 10
+  camerashakeMagnitude: 0.4
+  camerashakeDuration: 0.1
   camera: {fileID: 1692474069779646487}
   muzzleflash: {fileID: 1940241048193409818}
   impact: {fileID: 1929180936678203488, guid: 0386487f854a5774b84e45e6b65bd138, type: 3}
@@ -51258,6 +51278,8 @@ MonoBehaviour:
   spreadResetDelay: 0.5
   gunnumber: 0
   bulletpershot: 1
+  camerashakeMagnitude: 0.1
+  camerashakeDuration: 0.5
   camera: {fileID: 1692474069779646487}
   muzzleflash: {fileID: 1940241048981548212}
   impact: {fileID: 1929180936678203488, guid: 0386487f854a5774b84e45e6b65bd138, type: 3}
@@ -51494,6 +51516,8 @@ MonoBehaviour:
   spreadResetDelay: 1
   gunnumber: 1
   bulletpershot: 1
+  camerashakeMagnitude: 0.05
+  camerashakeDuration: 0.1
   camera: {fileID: 1692474069779646487}
   muzzleflash: {fileID: 1940241049387694428}
   impact: {fileID: 1929180936678203488, guid: 0386487f854a5774b84e45e6b65bd138, type: 3}
