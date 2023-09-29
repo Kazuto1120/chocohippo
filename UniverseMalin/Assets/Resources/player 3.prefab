@@ -24512,7 +24512,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1741602671742606388}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.10000003, z: 0.39999998}
+  m_LocalPosition: {x: 0, y: 0.10000003, z: 1.338}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -44044,7 +44044,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1741602673163313038}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.10000003, z: 0.39999998}
+  m_LocalPosition: {x: 0, y: 0.10000003, z: 1.252}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -49922,7 +49922,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.01
-  far clip plane: 200
+  far clip plane: 700
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -50804,7 +50804,7 @@ MonoBehaviour:
   range: 50
   firerate: 20
   bullet: 100
-  maxSpread: 0.2
+  maxSpread: 0.5
   spreadIncreasePerShot: 0.01
   spreadResetDelay: 2
   gunnumber: 3
