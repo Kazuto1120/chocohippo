@@ -29,7 +29,7 @@ Click create and play the game.
 
 
 Project Contributors:
-Zixian Lin (Manager and Video Game Programmer I)
+Zixian Lin (Project Manager and Video Game Programmer I)
 Andrew Gil (Video Game designer I and Game Tester)
 Aida Khydyrova (Sound Engineer and Game Artist)
 Jorge D Lata Armijos (Game programmer II,Game designer II)
