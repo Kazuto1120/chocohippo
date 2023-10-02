@@ -28,7 +28,11 @@ After the start icon, the game will ask you to create a game. You can use a rand
 Click create and play the game.
 
 
-Project Contributors:Zixian Lin, Andrew Gil, Aida Khydyrova, Jorge D Lata Armijos
+Project Contributors:
+Zixian Lin (Project Manager and Video Game Programmer I)
+Andrew Gil (Video Game designer I and Game Tester)
+Aida Khydyrova (Sound Engineer and Game Artist)
+Jorge D Lata Armijos (Game programmer II,Game designer II)
 
 Credit & License:
 -For installation of the game.
