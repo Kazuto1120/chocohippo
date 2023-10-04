@@ -1,0 +1,30 @@
+Date,Time,Hours,Objective
+08-28-2023,9am-10am,1,Finding a group and getting the contact information.
+8-29-2023,9am-2pm,4,Borrowed a C# fundamental textbook and watched youtube videos about unity. Download Unity
+08-30-2023,"9am-2pm,10pm-11pm",6,"Read the Unity manual guide, installing Unity, play the tutorial LEGO game, and chat group meeting."
+08-31-2023,"9am-12pm,2pm-4pm",5,Learning from the tutorial LEGO game and Completing the project proposal with group.
+9-1-2023,9am-7pm,10,"Reading 50 pages from HeadFirst C#(learner guide), learn about XAML and C# coding in VS."
+9-2-2023,9am-11am,2,"Read online sources about design document, project lifecycle,project management board."
+9-4-2023,9am-2pm,5,Watch Build your first 3D Game in unity by Coding in flow.
+9-5-2023,9am-2pm,5,Read Unity manual documentation:Introduction to 2D
+9-6-2023,3pm-4pm,1,Meeting with the project Supervisor to discuss ideas about the project and project design.
+9-7-2023,9am-1pm,4,Reading how to create a design document and writing the first draft design document.
+9-8-2023,9am-11am,2,Reading  Learn C# programming from tutorialspoint.
+09-11-2023,2pm-4:00pm,2,Group meeting to create and change the final design document.
+09-12-2023,9am-11:30am,2.5,Reading the unity manual document about the components and triggers.
+09-13-2023,10am-2pm,4,Watch C# tutorial Helicoper 3D-CS50's intro to Game development from freecodeacademy
+9-15,8am-5pm,9,learning how to use blender and studying c# fundamentals from online pages.
+9-17-2023,9am-12pm,3,creating blender objects and creating a simple game in unity.
+9-18-2023,9am-1pm,4,creating simple unity games to understand the unity features such is trigger and transform
+9-20-2023,12pm-2pm,2,learning how to create a door to take the character to another scene. Learn movements scripts.
+9-21,8pm-10pm,2,Group meeting to discuss our learning progress and ideas about the game. Set up github desktop
+9-22-2023,9am-12pm,3,"Learning how to use github desktop, reading online articles about github and monday.com"
+9-23-2023,9am-12pm,3,learning how to make gameobjects move around and destroying objects.
+9-24-2023,10am-1pm,3,learning how to do a software demo from youtube videos(lodestar solutions)
+9-25-2023,"10am-1pm,7pm-10pm",6,creating a 3D game map using a branch  from the original repository created by Lin. 
+9-26-2023,9am-1pm,4,"adding gameobjects to the game, adding moving objects and creating an alternative 3D map for the game."
+9-27-2023,"9am-12pm,9pm-10pm",6,continue creating more gameobjects for the map and learning about multiplayer tools. Group meeting to share work
+9-28-2023,9am-12pm,3,working on the 3D game and adding more content. merge the testing branch the main branch. Improving ReadMe file.
+9-30-2023,9am-10pm,1,Discord meeting with group to create a demo for the project.
+10-1-2023,9am-9:30am,30 min,Group meeting to discuss demo changes.
+10-2-2023,7pm-7:30pm,1,recreating timelog and adding timelog file to the group's repository.
