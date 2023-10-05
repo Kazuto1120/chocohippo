@@ -49300,8 +49300,8 @@ MonoBehaviour:
   player: {fileID: 1742149660250355641}
   body: {fileID: 1742149660250355643}
   gravity: -11
-  jumpheight: 1.2
-  walkspeed: 3
+  jumpheight: 2
+  walkspeed: 8
   air: 0
   groundedCheck: {fileID: 1742149661111572014}
   groundDistance: 0.4
