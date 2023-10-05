@@ -12,6 +12,7 @@ public class enemymovement : MonoBehaviour
 
     public NavMeshAgent agent;
     public LayerMask ground, playerlayer;
+    public GameObject attack;
     
 
     public Vector3 walkpoint;
@@ -38,8 +39,13 @@ public class enemymovement : MonoBehaviour
             playercharacter = null;
         }
         playerinattackrange = Physics.CheckSphere(transform.position, attackRadius,playerlayer);
-        
-        if(!playerInsightRange && !playerinattackrange)
+        Collider[] playerColliderA = Physics.OverlapSphere(transform.position, attackRadius, playerlayer);
+        if (playerColliderA.Length > 0)
+        {
+            playercharacter = playerColliderA[0];
+        }
+
+        if (!playerInsightRange && !playerinattackrange)
         {
             Patrolling();
         }else if (playerInsightRange && !playerinattackrange)
@@ -81,6 +87,7 @@ public class enemymovement : MonoBehaviour
         if (!alreadyattack)
         {
             alreadyattack = true;
+            attack.GetComponent<enemyattack>().shoot(playercharacter);
             Invoke(nameof(resetattack), timebetweenattacks);
         }
     }
