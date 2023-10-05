@@ -121,15 +121,21 @@ public class playerMovement : MonoBehaviour
         healthcircle.fillAmount = health / Maxhealth; 
     }
 
-
-    public void Takedamage(int damage)
+    
+    public void Takedamage(float damage)
     {
+        view.RPC("takedamage2",RpcTarget.AllBuffered,damage);
+
+    }
+    [PunRPC]
+    private void takedamage2(float damage)
+    {
+        Debug.Log("take damage "+damage);
         health = health - damage;
         healthCircle();
         if (health <= 0)
         {
             Destroy(gameObject);
         }
-
     }
 }

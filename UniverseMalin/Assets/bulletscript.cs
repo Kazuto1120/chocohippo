@@ -46,7 +46,7 @@ public class bulletscript : MonoBehaviour
         Collider[] players = Physics.OverlapSphere(transform.position, range, player);
         for(int i = 0; i < players.Length; ++i)
         {
-            Debug.Log(players[i].name);
+            players[i].GetComponent<playerMovement>().Takedamage(damage);
         }
         Invoke("Delay", 0.05f);
     }

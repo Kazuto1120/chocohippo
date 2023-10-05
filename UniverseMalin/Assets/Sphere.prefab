@@ -134,7 +134,7 @@ MonoBehaviour:
     m_Bits: 512
   bounce: 1
   gravity: 1
-  damage: 10
+  damage: 1
   range: 10
   maxCollision: 5
   lifetime: 5
