@@ -4,18 +4,11 @@ using UnityEngine;
 
 public class destroy : MonoBehaviour
 {
-    public float destroyDelay = 2f;
+    public float destroyDelay = 1.0f; // Time delay before destruction in seconds
 
     void Start()
     {
-        // Call the DestroySelf method after the specified delay
-        Invoke("DestroySelf", destroyDelay);
-    }
-
-    void DestroySelf()
-    {
-        // Destroy the GameObject this script is attached to
-        Destroy(gameObject);
+        // Schedule the object for destruction after the specified delay
+        Destroy(gameObject, destroyDelay);
     }
 }
-
