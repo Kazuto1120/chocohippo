@@ -1,0 +1,96 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class weaponswitch : MonoBehaviour
+{
+    public int weaponSelected = 0;
+    public GameObject scopeoverlay;
+    public Camera maincamera;
+    public Camera camera;
+
+    public Animator animator;
+    // Start is called before the first frame update
+    void Start()
+    {
+        selectweapon();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        int previousweapon = weaponSelected;
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+        {
+            if (weaponSelected >= transform.childCount - 1)
+            {
+                weaponSelected = 0;
+            }
+            else
+            {
+                weaponSelected++;
+            }
+        }
+        if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+        {
+            if (weaponSelected <= 0)
+            {
+                weaponSelected = transform.childCount - 1;
+            }
+            else
+            {
+                weaponSelected--;
+            }
+        }
+        if (previousweapon != weaponSelected)
+        {
+            selectweapon();
+        }
+        if(weaponSelected == 2 && Input.GetButtonDown("Fire2"))
+        {
+            animator.SetBool("scoping", !animator.GetBool("scoping"));
+            if (animator.GetBool("scoping"))
+            {
+                StartCoroutine(onscope());
+            }
+            else
+            {
+                unscope();
+            }
+        }
+    }
+    void unscope()
+    {
+        camera.enabled = true;
+        scopeoverlay.SetActive(false);
+        maincamera.fieldOfView = 60f;
+    }
+    IEnumerator onscope()
+    {
+        yield return new WaitForSeconds(.25f);
+        camera.enabled = false;
+        scopeoverlay.SetActive(true);
+        maincamera.fieldOfView = 15f;
+    }
+    void selectweapon()
+    {
+        int i = 0;
+        foreach (Transform weapon in transform)
+        {
+            if(i == weaponSelected)
+            {
+                animator.SetBool("scoping", false);
+                unscope();
+                animator.SetFloat("gunnum",weapon.gameObject.GetComponent<riflescript>().gunnumber);
+                animator.SetTrigger("switch");
+                weapon.gameObject.SetActive(true);
+                
+            }
+            else
+            {
+                weapon.gameObject.SetActive(false);
+            }
+            i++;
+        }
+    }
+}

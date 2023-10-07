@@ -37,7 +37,6 @@ public class movement : MonoBehaviourPunCallbacks
             isGrounded = Physics.CheckSphere(groundedCheck.position, groundDistance, ground);
             if (isGrounded)
             {
-                body.GetComponent<Animator>().SetBool("jump", false);
                 air = false;
             }
             if (isGrounded && velocity.y < 0)
@@ -48,25 +47,18 @@ public class movement : MonoBehaviourPunCallbacks
 
             float x = Input.GetAxis("Horizontal");
             float y = Input.GetAxis("Vertical");
-            if (x != 0 || y != 0)
-            {
-                body.GetComponent<Animator>().SetBool("ismoving", true);
-            }
-            else
-            {
-                body.GetComponent<Animator>().SetBool("ismoving", false);
-            }
+            
             Vector3 move = transform.right * x + transform.forward * y;
 
             if (Input.GetKey(runkey))
             {
                 speed = 2 * walkspeed;
-                body.GetComponent<Animator>().SetBool("isrunning", true);
+                
             }
             else
             {
                 speed = walkspeed;
-                body.GetComponent<Animator>().SetBool("isrunning", false);
+                
             }
             player.Move(move * speed * Time.deltaTime);
 
@@ -75,7 +67,6 @@ public class movement : MonoBehaviourPunCallbacks
                 velocity.y = Mathf.Sqrt(jumpheight * -2f * gravity);
                 if (!air)
                 {
-                    body.GetComponent<Animator>().SetBool("jump", true);
                     air = true;
                 }
             }
