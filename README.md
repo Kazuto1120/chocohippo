@@ -17,7 +17,8 @@ Table Content:
 
 -How to open our game in Unity via Github: https://www.youtube.com/watch?v=OOpTSlLkZyo
 
--How to start the game: First open the project from Unity and go to assets. Find and click the loading scene. Then you click the start icon. ![Screenshot 3](https://github.com/Kazuto1120/chocohippo/assets/57959207/348bbe26-a441-4260-9974-ef22641940e8)
+-How to start the game: First open the project from Unity and go to assets. Find and click the loading scene. Then you click the start icon.
+![Screenshot 3](https://github.com/Kazuto1120/chocohippo/assets/57959207/348bbe26-a441-4260-9974-ef22641940e8)
 
 
 
