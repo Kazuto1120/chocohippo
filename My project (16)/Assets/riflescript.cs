@@ -82,7 +82,7 @@ public class riflescript : MonoBehaviourPunCallbacks
             Vector3 bulletDirection = CalculateBulletDirection();
             if (Physics.Raycast(camera.transform.position, bulletDirection, out hit, range))
             {
-                Debug.Log(hit.transform.name);
+                Debug.Log("the name of the target hit:"+hit.transform.name);
                 
                 enemeysystem enemey = hit.transform.GetComponent<enemeysystem>();
                 if (enemey != null)
