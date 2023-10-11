@@ -30,6 +30,7 @@ public class enemeysystem : MonoBehaviour
     [PunRPC]
     private void takedamage2(float x)
     {
+        Debug.Log(x);
         health = health - x;
         view.RPC("sethealth",RpcTarget.AllBuffered);
         if (health <= 0)

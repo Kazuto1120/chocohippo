@@ -13,11 +13,16 @@ public class enemymovement : MonoBehaviour
     public NavMeshAgent agent;
     public LayerMask ground, playerlayer;
     public GameObject attack;
-    
+    public Animator animator;
+
+    private float idle2Chance = 0.25f;
+    private float timeBetweenIdle2Checks = 1.0f;
+    private float lastIdle2CheckTime;
 
     public Vector3 walkpoint;
     bool walkPointset;
     public float walkrange;
+    bool iding =false;
 
     public float timebetweenattacks;
     bool alreadyattack;
@@ -45,9 +50,21 @@ public class enemymovement : MonoBehaviour
             playercharacter = playerColliderA[0];
         }
 
+        if (iding && Time.time - lastIdle2CheckTime >= timeBetweenIdle2Checks)
+        {
+            lastIdle2CheckTime = Time.time;
+            float randomValue = Random.value;
+            if (randomValue <= idle2Chance)
+            {
+                idle2();
+            }
+        }
+
         if (!playerInsightRange && !playerinattackrange)
         {
-            Patrolling();
+
+                Patrolling();
+      
         }else if (playerInsightRange && !playerinattackrange)
         {
             chasePlayer();
@@ -59,14 +76,27 @@ public class enemymovement : MonoBehaviour
     }
     private void Patrolling()
     {
-        if (!walkPointset)
+        if (!walkPointset && !iding)
         {
-            Searchwalkpoint();
+            int x = Random.Range(-2, 2);
+            if (x < 0)
+            {
+                idle();
+            }
+            else
+            {
+                Searchwalkpoint();
+            }
+        }
+        else if(!iding)
+        {
+            agent.SetDestination(walkpoint);
+            animator.SetBool("moving",true);
+            transform.LookAt(walkpoint);
         }
         else
         {
-            agent.SetDestination(walkpoint);
-            transform.LookAt(walkpoint);
+            idle();
         }
         Vector3 distance = transform.position - walkpoint;
         if (distance.magnitude <= 2f)
@@ -77,12 +107,15 @@ public class enemymovement : MonoBehaviour
     }
     private void chasePlayer()
     {
+        animator.SetBool("moving", true);
         agent.SetDestination(playercharacter.transform.position);
         transform.LookAt(playercharacter.transform.position);
         
     }
     private void attackPlayer()
     {
+        animator.SetBool("moving", false);
+        animator.SetTrigger("attack");
         agent.SetDestination(transform.position);
         transform.LookAt(playercharacter.transform.position);
         if (!alreadyattack)
@@ -95,6 +128,16 @@ public class enemymovement : MonoBehaviour
     private void attackstage2()
     {
 
+    }
+    private void idle()
+    {
+        iding = true;
+        animator.SetBool("moving", false);
+    }
+    private void idle2()
+    {
+        animator.SetTrigger("switch");
+        Invoke(nameof(Searchwalkpoint), 2f);
     }
     private void resetattack()
     {
@@ -110,6 +153,7 @@ public class enemymovement : MonoBehaviour
         if (Physics.Raycast(walkpoint, -transform.up, 2f, ground))
         {
             walkPointset = true;
+            iding = false;
         }
         Debug.Log("newwalkset");
     }
