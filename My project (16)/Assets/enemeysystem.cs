@@ -4,8 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
 
+
 public class enemeysystem : MonoBehaviour
 {
+    public Animator animator;
     public PhotonView view;
     public float health = 100;
     public Slider slider;
@@ -35,12 +37,18 @@ public class enemeysystem : MonoBehaviour
         view.RPC("sethealth",RpcTarget.AllBuffered);
         if (health <= 0)
         {
-            Destroy(gameObject);
+            animator.SetTrigger("dead");
+            StartCoroutine(DestroyAfterDelay(2f));
         }
     }
     [PunRPC]
     private void sethealth()
     {
         slider.value = health;
+    }
+    private IEnumerator DestroyAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        PhotonNetwork.Destroy(gameObject);
     }
 }
