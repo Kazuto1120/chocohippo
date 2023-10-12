@@ -162,6 +162,7 @@ public class enemymovement : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
+        Gizmos.DrawLine(transform.position, walkpoint);
     }
 
 }
