@@ -153,10 +153,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerPrefeb: {fileID: 1742149660250355643, guid: daa62e981bd1aa54e91158ae73513420, type: 3}
-  minx: -30
-  maxX: 30
-  minZ: -30
-  maxZ: 30
+  minx: -60
+  maxX: 60
+  minZ: -60
+  maxZ: 60
 --- !u!4 &90089017
 Transform:
   m_ObjectHideFlags: 0
