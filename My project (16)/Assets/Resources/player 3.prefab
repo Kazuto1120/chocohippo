@@ -49006,7 +49006,7 @@ GameObject:
   - component: {fileID: 7247693508494936878}
   m_Layer: 0
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49678,9 +49678,11 @@ GameObject:
   - component: {fileID: 1742149661031223018}
   - component: {fileID: 1742149661031223019}
   - component: {fileID: 1697085571371716736}
+  - component: {fileID: 4602863196061539733}
+  - component: {fileID: 3106745124806218232}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49815,6 +49817,33 @@ MonoBehaviour:
     LayerIndex: 0
   - SynchronizeType: 2
     LayerIndex: 1
+--- !u!136 &4602863196061539733
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742149661031223021}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.6
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3106745124806218232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742149661031223021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbbdc85502f3ae041b768f78689f7c00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game: {fileID: 1742149660250355643}
 --- !u!1 &1742149661111572015
 GameObject:
   m_ObjectHideFlags: 0

@@ -51,4 +51,5 @@ public class enemeysystem : MonoBehaviour
         yield return new WaitForSeconds(delay);
         PhotonNetwork.Destroy(gameObject);
     }
+   
 }

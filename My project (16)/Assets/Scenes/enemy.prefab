@@ -101,8 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cede4ebe96977c24e8af0e626b45de66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 50
-  attackRadius: 20
+  lookRadius: 80
+  attackRadius: 30
   agent: {fileID: 1867461088926380404}
   ground:
     serializedVersion: 2
