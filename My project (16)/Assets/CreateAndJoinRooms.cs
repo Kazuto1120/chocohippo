@@ -45,6 +45,8 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
         yield return new WaitForSeconds(1);
 
         PhotonNetwork.JoinRoom(joinInput.text);
+        PhotonNetwork.CreateRoom(joinInput.text);
+
     }
 
 
