@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class ConnectToServer : MonoBehaviourPunCallbacks
 {
     public Animator animator;
-    public bool finish = false;
+    public AudioSource audio;
+    private bool finish = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +34,7 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     }
     IEnumerator Load()
     {
+        audio.Play();
         animator.SetTrigger("start");
 
         yield return new WaitForSeconds(1);
