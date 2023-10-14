@@ -48949,7 +48949,7 @@ GameObject:
   - component: {fileID: 2639052233019305762}
   m_Layer: 0
   m_Name: groundcheck
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49280,6 +49280,7 @@ MonoBehaviour:
   scopeoverlay: {fileID: 2639052233213204819}
   maincamera: {fileID: 2639052232846005512}
   camera: {fileID: 2639052234219989152}
+  view: {fileID: 0}
   animator: {fileID: 2639052233200318439}
 --- !u!1 &2639052233878294199
 GameObject:
@@ -49349,6 +49350,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bbc394efb3933f48a4477e97a5f6d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthcircle: {fileID: 0}
+  Maxhealth: 100
   health: 100
   player: {fileID: 2639052233878294197}
   body: {fileID: 2639052233878294199}
@@ -49979,6 +49982,8 @@ MonoBehaviour:
   spreadResetDelay: 1
   gunnumber: 1
   bulletpershot: 1
+  camerashakeMagnitude: 0
+  camerashakeDuration: 0
   camera: {fileID: 2639052232846005512}
   muzzleflash: {fileID: 2765079400787214416}
   impact: {fileID: 1929180936678203488, guid: 0386487f854a5774b84e45e6b65bd138, type: 3}
@@ -49986,7 +49991,9 @@ MonoBehaviour:
   sound: {fileID: 2639052232984074727}
   playerMovement: {fileID: 2639052233878294198}
   animator: {fileID: 2639052233200318439}
+  ammobar: {fileID: 0}
   shootkey: 323
+  abletofire: 1
 --- !u!1 &6322527281064196022
 GameObject:
   m_ObjectHideFlags: 0
@@ -50190,6 +50197,8 @@ MonoBehaviour:
   spreadResetDelay: 0.5
   gunnumber: 0
   bulletpershot: 1
+  camerashakeMagnitude: 0
+  camerashakeDuration: 0
   camera: {fileID: 2639052234219989152}
   muzzleflash: {fileID: 2765079401193493944}
   impact: {fileID: 1929180936678203488, guid: 0386487f854a5774b84e45e6b65bd138, type: 3}
@@ -50197,7 +50206,9 @@ MonoBehaviour:
   sound: {fileID: 2639052234458389889}
   playerMovement: {fileID: 2639052233878294198}
   animator: {fileID: 2639052233200318439}
+  ammobar: {fileID: 0}
   shootkey: 323
+  abletofire: 1
 --- !u!1 &6322527281317867682
 GameObject:
   m_ObjectHideFlags: 0
@@ -50401,6 +50412,8 @@ MonoBehaviour:
   spreadResetDelay: 1
   gunnumber: 4
   bulletpershot: 6
+  camerashakeMagnitude: 0
+  camerashakeDuration: 0
   camera: {fileID: 2639052232846005512}
   muzzleflash: {fileID: 2765079401883064854}
   impact: {fileID: 1929180936678203488, guid: 0386487f854a5774b84e45e6b65bd138, type: 3}
@@ -50408,7 +50421,9 @@ MonoBehaviour:
   sound: {fileID: 2639052233008077183}
   playerMovement: {fileID: 2639052233878294198}
   animator: {fileID: 2639052233200318439}
+  ammobar: {fileID: 0}
   shootkey: 323
+  abletofire: 1
 --- !u!1 &6322527281362925372
 GameObject:
   m_ObjectHideFlags: 0
@@ -50612,6 +50627,8 @@ MonoBehaviour:
   spreadResetDelay: 2
   gunnumber: 3
   bulletpershot: 1
+  camerashakeMagnitude: 0
+  camerashakeDuration: 0
   camera: {fileID: 2639052232846005512}
   muzzleflash: {fileID: 2765079400326011308}
   impact: {fileID: 1929180936678203488, guid: 0386487f854a5774b84e45e6b65bd138, type: 3}
@@ -50619,7 +50636,9 @@ MonoBehaviour:
   sound: {fileID: 2639052233895862660}
   playerMovement: {fileID: 2639052233878294198}
   animator: {fileID: 2639052233200318439}
+  ammobar: {fileID: 0}
   shootkey: 323
+  abletofire: 1
 --- !u!1 &6322527281551644923
 GameObject:
   m_ObjectHideFlags: 0
@@ -50823,6 +50842,8 @@ MonoBehaviour:
   spreadResetDelay: 1
   gunnumber: 2
   bulletpershot: 1
+  camerashakeMagnitude: 0
+  camerashakeDuration: 0
   camera: {fileID: 2639052232846005512}
   muzzleflash: {fileID: 2765079401108028266}
   impact: {fileID: 1929180936678203488, guid: 0386487f854a5774b84e45e6b65bd138, type: 3}
@@ -50830,4 +50851,6 @@ MonoBehaviour:
   sound: {fileID: 2639052234570207712}
   playerMovement: {fileID: 2639052233878294198}
   animator: {fileID: 2639052233200318439}
+  ammobar: {fileID: 0}
   shootkey: 323
+  abletofire: 1
