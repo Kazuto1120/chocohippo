@@ -41,4 +41,5 @@ Credit & License:
 -For installation of the game.
 Youtube.com and unity.com
 
--Personal license (educational purpose)
+-Music license (educational purpose)
+Music by <a href="https://pixabay.com/users/paulyudin-27739282/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=157045">Pavel Bekirov</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=157045">Pixabay</a>
