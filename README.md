@@ -18,13 +18,15 @@ Table Content:
 -How to open our game in Unity via Github: https://www.youtube.com/watch?v=OOpTSlLkZyo
 
 -How to start the game: First open the project from Unity and go to assets. Find and click the loading scene. Then you click the start icon.
-![Screenshot 3](https://github.com/Kazuto1120/chocohippo/assets/57959207/348bbe26-a441-4260-9974-ef22641940e8)
+![image](https://github.com/Kazuto1120/chocohippo/assets/57959207/94096ead-e1b3-4a4d-a4b8-434036a4e68d)
 
 
 
 
-After the start icon, the game will ask you to create a game. You can use a random name.
-![Screenshot 2](https://github.com/Kazuto1120/chocohippo/assets/57959207/c0694a9f-2bce-4c39-b37a-b1aafb35121c)
+
+After the start icon, the game will ask you to create a game or join a room.
+![image](https://github.com/Kazuto1120/chocohippo/assets/57959207/fd747e49-f1cc-433a-8431-80279bb9fefc)
+
 
 Click create and play the game.
 
