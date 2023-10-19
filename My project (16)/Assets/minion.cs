@@ -76,11 +76,11 @@ public class minion : MonoBehaviour
 
         if (!walkPointset) Searchwalkpoint();
         if (walkPointset) agent.SetDestination(walkpoint);
-        Debug.Log("no problem");
+        
         Vector3 distance = transform.position - walkpoint;
         if (distance.magnitude <= 2f)
         {
-            Debug.Log("reach");
+            
             walkPointset = false;
         }
     }
@@ -104,17 +104,16 @@ public class minion : MonoBehaviour
         {
             walkPointset = true;
         }
-        Debug.Log("newwalkset");
+        
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("collide");
+    
         if (collision.collider.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<takedamage>().Takedamage(damage);
         }
-        Debug.Log(collision.gameObject.tag);
-        Debug.Log(collision.gameObject.name);
+
         Vector3 bounceDirection = (transform.position - collision.contacts[0].point).normalized;
         GetComponent<Rigidbody>().AddForce(bounceDirection * bounceForce, ForceMode.Impulse);
         StartCoroutine(StopBounceForce());

@@ -45,9 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 7800905539297599776, guid: d060e4e6d0370b141a6dce47bf50fcda, type: 3}
-  shootforce: 10
-  upwardforce: 10
-  bulletpershot: 3
+  minion: {fileID: 7800905539297599776, guid: 6f92cd7a3a8e8054eb004af75b5260e7, type: 3}
+  shootforce: 12
+  upwardforce: 12
+  bulletpershot: 5
 --- !u!1 &1867461088926380403
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,6 +104,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookRadius: 80
   attackRadius: 30
+  minion: {fileID: 7335185612347493065, guid: d98ae84ba0ad05444a33b153a4c9a715, type: 3}
+  totalminion: 1
+  currentminion: 0
   agent: {fileID: 1867461088926380404}
   ground:
     serializedVersion: 2
@@ -238,7 +242,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 8713316434916147501}
   view: {fileID: 2905192534558543949}
-  health: 1000
+  maxhealth: 1500
+  health: 0
   slider: {fileID: 8713316434242808895}
 --- !u!1 &8713316433249481916
 GameObject:

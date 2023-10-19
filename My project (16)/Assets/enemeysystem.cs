@@ -9,11 +9,14 @@ public class enemeysystem : MonoBehaviour
 {
     public Animator animator;
     public PhotonView view;
+    public float maxhealth = 1000;
     public float health = 100;
     public Slider slider;
+    private float tempD = 0;
 
     void Start()
     {
+        health = maxhealth;
         view = GetComponent<PhotonView>();
         slider.maxValue = health;
         view.RPC("sethealth", RpcTarget.AllBuffered);
@@ -34,6 +37,15 @@ public class enemeysystem : MonoBehaviour
     {
         Debug.Log(x);
         health = health - x;
+        tempD += x;
+        if (tempD >= 75)
+        {
+            if (0 > Random.RandomRange(-10, 10) && health <= maxhealth / 2)
+            {
+                GetComponent<enemymovement>().totalminion += 1;
+            }
+            tempD = 0;
+        }
         view.RPC("sethealth",RpcTarget.AllBuffered);
         if (health <= 0)
         {

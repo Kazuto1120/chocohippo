@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class bulletscript : MonoBehaviour
 {
     public Rigidbody rb;
     public GameObject explosion;
+
     public LayerMask player;
 
     [Range(0f, 1f)]
@@ -14,6 +16,8 @@ public class bulletscript : MonoBehaviour
 
     public float damage;
     public float range;
+    public bool exploded = false;
+    public int count = 0;
 
     public int maxCollision;
     public float lifetime;
@@ -23,7 +27,7 @@ public class bulletscript : MonoBehaviour
     PhysicMaterial physicM;
     private void Start()
     {
-        Setup();   
+        Setup();
     }
     private void Update()
     {
@@ -32,7 +36,7 @@ public class bulletscript : MonoBehaviour
             Explode();
         }
         lifetime -= Time.deltaTime;
-        if (lifetime <= 0f)
+        if (lifetime <= 0f && !exploded)
         {
             Explode();
         }
@@ -41,14 +45,26 @@ public class bulletscript : MonoBehaviour
     {
         if (explosion != null)
         {
-            Instantiate(explosion, transform.position, Quaternion.identity);
+            Instantiate(explosion, transform.position, Quaternion.identity); ;
         }
-        Collider[] players = Physics.OverlapSphere(transform.position, range, player);
-        for(int i = 0; i < players.Length; ++i)
+        minionspawn temp = GetComponent<minionspawn>();
+        if (temp != null && count == 0)
         {
-            players[i].GetComponent<playerMovement>().Takedamage(damage);
+            Debug.Log("code run");
+            count = 1;
+            exploded = true;
+            temp.Spawn();
         }
-        Invoke("Delay", 0.05f);
+        else
+        {
+            Collider[] players = Physics.OverlapSphere(transform.position, range, player);
+            for (int i = 0; i < players.Length; ++i)
+            {
+                players[i].GetComponent<playerMovement>().Takedamage(damage);
+            }
+        }
+            Invoke("Delay", 0.05f);
+        
     }
     private void Delay()
     {

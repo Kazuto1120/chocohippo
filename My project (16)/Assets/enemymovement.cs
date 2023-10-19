@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Photon.Pun;
 
 
 
@@ -11,7 +12,9 @@ public class enemymovement : MonoBehaviour
     bool playerInsightRange, playerinattackrange;
     Collider playercharacter;
 
-    
+    public GameObject minion;
+    public int totalminion =2;
+    public int currentminion = 0;
 
     public NavMeshAgent agent;
     public LayerMask ground, playerlayer;
@@ -37,6 +40,10 @@ public class enemymovement : MonoBehaviour
     
     private void Update()
     {
+        if (GetComponent<enemeysystem>().health <= (GetComponent<enemeysystem>().maxhealth / 2) && currentminion < totalminion)
+        {
+            attackstage2();
+        }
         playerInsightRange = Physics.CheckSphere(transform.position, lookRadius, playerlayer);
         Collider[] playerCollider = Physics.OverlapSphere(transform.position, lookRadius, playerlayer);
         if (playerCollider.Length>0)
@@ -105,7 +112,7 @@ public class enemymovement : MonoBehaviour
         Vector3 distance = transform.position - walkpoint;
         if (distance.magnitude <= 2f)
         {
-            Debug.Log("reach");
+           
             walkPointset = false;
         }
     }
@@ -131,6 +138,17 @@ public class enemymovement : MonoBehaviour
     }
     private void attackstage2()
     {
+        animator.SetTrigger("attack");
+        
+        Collider[] playerColliderh = Physics.OverlapSphere(transform.position, 1000f, playerlayer);
+        if (playerColliderh.Length > 0)
+        {
+             playercharacter = playerColliderh[0];
+        }
+        transform.LookAt(playercharacter.transform.position);
+        attack.GetComponent<enemyattack>().shoot2(playercharacter);
+        currentminion++;
+
 
     }
     private void idle()
@@ -159,7 +177,7 @@ public class enemymovement : MonoBehaviour
             walkPointset = true;
             iding = false;
         }
-        Debug.Log("newwalkset");
+        
     }
 
     private void OnDrawGizmosSelected()
