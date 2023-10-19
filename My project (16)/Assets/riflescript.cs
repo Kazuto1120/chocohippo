@@ -89,6 +89,11 @@ public class riflescript : MonoBehaviourPunCallbacks
                 {
                     enemey.takedamage(damage);
                 }
+                minion temp = hit.transform.GetComponent<minion>();
+                if (temp != null)
+                {
+                    temp.takedamage(damage);
+                }
                 PhotonNetwork.Instantiate(impact.name, hit.point, Quaternion.LookRotation(hit.normal));
             }
             bulletremain--;

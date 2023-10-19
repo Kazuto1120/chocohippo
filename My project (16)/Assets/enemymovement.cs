@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
+
 public class enemymovement : MonoBehaviour
 {
     public float lookRadius, attackRadius;
     bool playerInsightRange, playerinattackrange;
     Collider playercharacter;
 
+    
 
     public NavMeshAgent agent;
     public LayerMask ground, playerlayer;
@@ -31,6 +34,7 @@ public class enemymovement : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
     }
+    
     private void Update()
     {
         playerInsightRange = Physics.CheckSphere(transform.position, lookRadius, playerlayer);

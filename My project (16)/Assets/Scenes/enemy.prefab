@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 2517824664049411900}
   - component: {fileID: 2905192534558543949}
   - component: {fileID: 1867461088926380415}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ MonoBehaviour:
     m_Bits: 64
   playerlayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 640
   attack: {fileID: 1867461088327450163}
   animator: {fileID: 8713316434916147501}
   walkpoint: {x: 0, y: 0, z: 0}

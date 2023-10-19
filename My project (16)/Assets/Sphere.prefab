@@ -131,7 +131,7 @@ MonoBehaviour:
   explosion: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
   player:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 640
   bounce: 1
   gravity: 1
   damage: 1
