@@ -64,7 +64,6 @@ GameObject:
   - component: {fileID: 1867461088926380407}
   - component: {fileID: 2517824664049411900}
   - component: {fileID: 2905192534558543949}
-  - component: {fileID: 1867461088926380415}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Untagged
@@ -104,6 +103,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookRadius: 80
   attackRadius: 30
+  view: {fileID: 2905192534558543949}
+  maxhealth: 1000
+  health: 100
+  slider: {fileID: 8713316434242808895}
   minion: {fileID: 7335185612347493065, guid: d98ae84ba0ad05444a33b153a4c9a715, type: 3}
   totalminion: 1
   currentminion: 0
@@ -228,23 +231,6 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &1867461088926380415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1867461088926380403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f2d4b9efb48a0246b09563a1a1ad09d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 8713316434916147501}
-  view: {fileID: 2905192534558543949}
-  maxhealth: 1500
-  health: 0
-  slider: {fileID: 8713316434242808895}
 --- !u!1 &8713316433249481916
 GameObject:
   m_ObjectHideFlags: 0

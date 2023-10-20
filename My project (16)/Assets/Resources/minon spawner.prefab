@@ -140,6 +140,7 @@ MonoBehaviour:
   damage: 1
   range: 10
   exploded: 0
+  count: 0
   maxCollision: 5
   lifetime: 5
   playerCollide: 1

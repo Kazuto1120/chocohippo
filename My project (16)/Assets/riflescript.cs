@@ -84,7 +84,7 @@ public class riflescript : MonoBehaviourPunCallbacks
             {
                 Debug.Log("the name of the target hit:"+hit.transform.name);
                 
-                enemeysystem enemey = hit.transform.GetComponent<enemeysystem>();
+                enemymovement enemey = hit.transform.GetComponent<enemymovement>();
                 if (enemey != null)
                 {
                     enemey.takedamage(damage);

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using Photon.Pun;
+using UnityEngine.UI;
 
 
 
@@ -11,6 +12,12 @@ public class enemymovement : MonoBehaviour
     public float lookRadius, attackRadius;
     bool playerInsightRange, playerinattackrange;
     Collider playercharacter;
+
+    public PhotonView view;
+    public float maxhealth = 1000;
+    public float health = 100;
+    public Slider slider;
+    private float tempD = 0;
 
     public GameObject minion;
     public int totalminion =2;
@@ -37,10 +44,18 @@ public class enemymovement : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
     }
-    
+    private void Start()
+    {
+
+        health = maxhealth;
+        view = GetComponent<PhotonView>();
+        slider.maxValue = health;
+        view.RPC("sethealth", RpcTarget.AllBuffered);
+    }
+
     private void Update()
     {
-        if (GetComponent<enemeysystem>().health <= (GetComponent<enemeysystem>().maxhealth / 2) && currentminion < totalminion)
+        if (health <= (maxhealth / 2) && currentminion < totalminion)
         {
             attackstage2();
         }
@@ -178,6 +193,41 @@ public class enemymovement : MonoBehaviour
             iding = false;
         }
         
+    }
+    public void takedamage(float x)
+    {
+        view.RPC("takedamage2", RpcTarget.AllBuffered, x);
+    }
+    [PunRPC]
+    private void takedamage2(float x)
+    {
+        Debug.Log(x);
+        health = health - x;
+        tempD += x;
+        if (tempD >= 75)
+        {
+            if (0 > Random.RandomRange(-10, 10) && health <= maxhealth / 2)
+            {
+                GetComponent<enemymovement>().totalminion += 1;
+            }
+            tempD = 0;
+        }
+        view.RPC("sethealth", RpcTarget.AllBuffered);
+        if (health <= 0)
+        {
+            animator.SetTrigger("dead");
+            StartCoroutine(DestroyAfterDelay(2f));
+        }
+    }
+    [PunRPC]
+    private void sethealth()
+    {
+        slider.value = health;
+    }
+    private IEnumerator DestroyAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        PhotonNetwork.Destroy(gameObject);
     }
 
     private void OnDrawGizmosSelected()
