@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 public class enemymovement : MonoBehaviour
 {
-    public float lookRadius, attackRadius;
+    public float lookRadius,look, attackRadius;
     bool playerInsightRange, playerinattackrange;
     Collider playercharacter;
 
@@ -27,6 +27,7 @@ public class enemymovement : MonoBehaviour
     public LayerMask ground, playerlayer;
     public GameObject attack;
     public Animator animator;
+    public Animator animatortwo;
 
     private float idle2Chance = 0.25f;
     private float timeBetweenIdle2Checks = 1.0f;
@@ -46,7 +47,7 @@ public class enemymovement : MonoBehaviour
     }
     private void Start()
     {
-
+        look = lookRadius;
         health = maxhealth;
         view = GetComponent<PhotonView>();
         slider.maxValue = health;
@@ -201,7 +202,7 @@ public class enemymovement : MonoBehaviour
     [PunRPC]
     private void takedamage2(float x)
     {
-        lookRadius = 200;
+        lookRadius = lookRadius * 5;
         Debug.Log(x);
         health = health - x;
         tempD += x;
@@ -217,6 +218,7 @@ public class enemymovement : MonoBehaviour
         if (health <= 0)
         {
             animator.SetTrigger("dead");
+            animatortwo.SetTrigger("bossroom");
             StartCoroutine(DestroyAfterDelay(2f));
         }
     }
