@@ -1,4 +1,4 @@
-Date,Time,Hours,Objective
+Date,Time,Hours,Task completed,Next Step.
 08-28-2023,9am-10am,1,Finding a group and getting the contact information.
 8-29-2023,9am-2pm,4,Borrowed a C# fundamental textbook and watched youtube videos about unity. Download Unity
 08-30-2023,"9am-2pm,10pm-11pm",6,"Read the Unity manual guide, installing Unity, play the tutorial LEGO game, and chat group meeting."
@@ -33,3 +33,7 @@ Date,Time,Hours,Objective
 10-15-2023,10pm-1am,3,adding moving gameobjects to the new scene established by lin.
 10-16-2023,8am-9am,1,updating readme file and updating UML.
 10-18-2023,10am-10:20am & 11am-11:30am,50 min,presenting Demo 1 and meeting with supervisor.
+10-19-2023,9am-11am,2,research about multiplayer video games in unity.
+10-21-2023,8pm-11pm,3,review the scripts and method multiplayer capability was implemented.
+10-23-2023,9pm-1am,4,creating portal door in scene map and creating a building in the scene level1,check with team before merging my work to the main branck.
+
