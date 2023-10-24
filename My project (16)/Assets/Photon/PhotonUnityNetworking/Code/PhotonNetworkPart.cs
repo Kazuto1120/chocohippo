@@ -300,7 +300,7 @@ namespace Photon.Pun
                 {
                     if (view.isRuntimeInstantiated)
                     {
-                        instantiatedGos.Add(view.gameObject); // HashSet keeps each object only once
+                        _ = instantiatedGos.Add(view.gameObject); // HashSet keeps each object only once
                     }
                     // For non-instantiated objects (scene objects) - reset the view
                     else
