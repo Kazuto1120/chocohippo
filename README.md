@@ -1,3 +1,4 @@
+![image](https://github.com/Kazuto1120/chocohippo/assets/57959207/41640373-34ee-4f8f-96c7-c6fff7fc2081)
 Welcome!
 
 Project Title: UniverseMalin is designed to be a multiplayer 3D game where players will play a cell character and it will be tasked to destroy harmful invaders such as viruses and bacteria. The main goal of the game is to provide an educational and  joyful experience. In addition, we expect the content of the video game would encourage users to read and research about the things they find interesting in the game. 
@@ -38,6 +39,8 @@ Aida Khydyrova (Sound Engineer and Game Artist)
 Jorge D Lata Armijos (Game programmer II,Game designer II)
 
 Credit & License:
+Photo by <a href="https://unsplash.com/@carltraw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Carl Raw</a> on <a href="https://unsplash.com/photos/gaming-room-with-arcade-machines-m3hn2Kn5Bns?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  
 -For installation of the game.
 Youtube.com and unity.com
 
