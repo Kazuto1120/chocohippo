@@ -1,10 +1,6 @@
-
-
 ![image](https://github.com/Kazuto1120/chocohippo/assets/57959207/41640373-34ee-4f8f-96c7-c6fff7fc2081)
-
-
-
 Welcome!
+
 Project Title: UniverseMalin is designed to be a multiplayer 3D game where players will play a cell character and it will be tasked to destroy harmful invaders such as viruses and bacteria. The main goal of the game is to provide an educational and  joyful experience. In addition, we expect the content of the video game would encourage users to read and research about the things they find interesting in the game. 
 
 Project Description: The game is supposed to spark the curiosity of the users about the things they find interesting during play time. It also allows family members to play together and explore a diverse game world. As new game developers, we decided to use the Unity engine to develop the game because Unity is a great free technology tool to build the components that make up the game. In fact, Unity engine has been used as a teaching tool to immerse students into software development. In addition, there is vast amounts of helpful information about how to operate Unity as beginners. We may use Blender,a free and open-source 3D computer software tool set used to create game models, in order to get the full game development experience. We hope to learn a lot about teamwork and game development. Despite our lack of experience,we hope to develop the best possible game for the gaming community. 
