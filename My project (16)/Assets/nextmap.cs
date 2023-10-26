@@ -7,6 +7,10 @@ public class nextmap : MonoBehaviour
 {
     public string name;
     public LayerMask playerlayer;
+    private void Start()
+    {
+        PhotonNetwork.AutomaticallySyncScene = true;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,7 +22,8 @@ public class nextmap : MonoBehaviour
         {
             playerCollider[i].GetComponent<playerMovement>().Takedamage(1000);
         }
-        PhotonNetwork.LoadLevel(name);
         
+        PhotonNetwork.LoadLevel(name);
+
     }
 }

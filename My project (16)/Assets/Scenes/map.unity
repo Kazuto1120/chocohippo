@@ -211,6 +211,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: map2
+  playerlayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!65 &270786807
 BoxCollider:
   m_ObjectHideFlags: 0
