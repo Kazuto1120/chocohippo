@@ -7,39 +7,57 @@ using Photon.Pun;
 
 public class boss2movement : MonoBehaviour
 {
-    public float lookRadius, attackRadius;
+    public float lookRadius, look, attackRadius;
     bool playerInsightRange, playerinattackrange;
     Collider playercharacter;
-    public int damage = 100;
-    public float bounceForce = 1;
 
     public PhotonView view;
-    public float health = 1000;
+    public float maxhealth = 1000;
+    public float health = 100;
     public Slider slider;
+    private float tempD = 0;
+
+    public GameObject minion;
+    public int totalminion = 2;
+    public int currentminion = 0;
 
     public NavMeshAgent agent;
     public LayerMask ground, playerlayer;
     public GameObject attack;
     public Animator animator;
+    public Animator animatortwo;
+
+    private float idle2Chance = 0.25f;
+    private float timeBetweenIdle2Checks = 1.0f;
+    private float lastIdle2CheckTime;
 
     public Vector3 walkpoint;
     bool walkPointset;
     public float walkrange;
-    // Start is called before the first frame update
+    bool iding = false;
+
+    public float timebetweenattacks;
+    bool alreadyattack;
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
     }
     private void Start()
     {
+        look = lookRadius;
+        health = maxhealth;
         view = GetComponent<PhotonView>();
         slider.maxValue = health;
         view.RPC("sethealth", RpcTarget.AllBuffered);
     }
 
-
-    void Update()
+    private void Update()
     {
+        if (health <= (maxhealth / 2) && currentminion < totalminion)
+        {
+            attackstage2();
+        }
         playerInsightRange = Physics.CheckSphere(transform.position, lookRadius, playerlayer);
         Collider[] playerCollider = Physics.OverlapSphere(transform.position, lookRadius, playerlayer);
         if (playerCollider.Length > 0)
@@ -56,6 +74,17 @@ public class boss2movement : MonoBehaviour
         {
             playercharacter = playerColliderA[0];
         }
+
+        if (iding && Time.time - lastIdle2CheckTime >= timeBetweenIdle2Checks)
+        {
+            lastIdle2CheckTime = Time.time;
+            float randomValue = Random.value;
+            if (randomValue <= idle2Chance)
+            {
+                idle2();
+            }
+        }
+
         if (!playerInsightRange && !playerinattackrange)
         {
 
@@ -73,10 +102,28 @@ public class boss2movement : MonoBehaviour
     }
     private void Patrolling()
     {
-
-        if (!walkPointset) Searchwalkpoint();
-        if (walkPointset) agent.SetDestination(walkpoint);
-
+        if (!walkPointset && !iding)
+        {
+            int x = Random.Range(-2, 2);
+            if (x < 0)
+            {
+                idle();
+            }
+            else
+            {
+                Searchwalkpoint();
+            }
+        }
+        else if (!iding)
+        {
+            agent.SetDestination(walkpoint);
+            animator.SetBool("moving", true);
+            transform.LookAt(walkpoint);
+        }
+        else
+        {
+            idle();
+        }
         Vector3 distance = transform.position - walkpoint;
         if (distance.magnitude <= 2f)
         {
@@ -86,12 +133,52 @@ public class boss2movement : MonoBehaviour
     }
     private void chasePlayer()
     {
+        animator.SetBool("moving", true);
         agent.SetDestination(playercharacter.transform.position);
         transform.LookAt(playercharacter.transform.position);
+
     }
     private void attackPlayer()
     {
+        animator.SetBool("moving", false);
+        animator.SetTrigger("attack");
+        agent.SetDestination(transform.position);
+        transform.LookAt(playercharacter.transform.position);
+        if (!alreadyattack)
+        {
+            alreadyattack = true;
+            attack.GetComponent<enemyattack>().shoot(playercharacter);
+            Invoke(nameof(resetattack), timebetweenattacks);
+        }
+    }
+    private void attackstage2()
+    {
+        animator.SetTrigger("attack");
 
+        Collider[] playerColliderh = Physics.OverlapSphere(transform.position, 1000f, playerlayer);
+        if (playerColliderh.Length > 0)
+        {
+            playercharacter = playerColliderh[0];
+        }
+        transform.LookAt(playercharacter.transform.position);
+        attack.GetComponent<enemyattack>().shoot2(playercharacter);
+        currentminion++;
+
+
+    }
+    private void idle()
+    {
+        iding = true;
+        animator.SetBool("moving", false);
+    }
+    private void idle2()
+    {
+        animator.SetTrigger("switch");
+        Invoke(nameof(Searchwalkpoint), 2f);
+    }
+    private void resetattack()
+    {
+        alreadyattack = false;
     }
     private void Searchwalkpoint()
     {
@@ -103,26 +190,9 @@ public class boss2movement : MonoBehaviour
         if (Physics.Raycast(walkpoint, -transform.up, 2f, ground))
         {
             walkPointset = true;
+            iding = false;
         }
 
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
-
-        if (collision.collider.CompareTag("Player"))
-        {
-            collision.gameObject.GetComponent<takedamage>().Takedamage(damage);
-        }
-
-        Vector3 bounceDirection = (transform.position - collision.contacts[0].point).normalized;
-        GetComponent<Rigidbody>().AddForce(bounceDirection * bounceForce, ForceMode.Impulse);
-        StartCoroutine(StopBounceForce());
-    }
-    private IEnumerator StopBounceForce()
-    {
-        yield return new WaitForSeconds(0.5f);
-
-        GetComponent<Rigidbody>().velocity = Vector3.zero;
     }
     public void takedamage(float x)
     {
@@ -131,13 +201,24 @@ public class boss2movement : MonoBehaviour
     [PunRPC]
     private void takedamage2(float x)
     {
+        lookRadius = lookRadius * 5;
         Debug.Log(x);
         health = health - x;
+        tempD += x;
+        if (tempD >= 75)
+        {
+            if (0 > Random.RandomRange(-10, 10) && health <= maxhealth / 2)
+            {
+                GetComponent<enemymovement>().totalminion += 1;
+            }
+            tempD = 0;
+        }
         view.RPC("sethealth", RpcTarget.AllBuffered);
         if (health <= 0)
         {
             animator.SetTrigger("dead");
-            StartCoroutine(DestroyAfterDelay(0f));
+            animatortwo.SetTrigger("bossroom");
+            StartCoroutine(DestroyAfterDelay(2f));
         }
     }
     [PunRPC]
@@ -150,4 +231,12 @@ public class boss2movement : MonoBehaviour
         yield return new WaitForSeconds(delay);
         PhotonNetwork.Destroy(gameObject);
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, lookRadius);
+        Gizmos.DrawLine(transform.position, walkpoint);
+    }
+
 }
