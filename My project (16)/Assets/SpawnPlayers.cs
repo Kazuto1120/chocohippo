@@ -11,10 +11,11 @@ public class SpawnPlayers : MonoBehaviour
     public float maxX = 0f;
     public float minZ = -8f;
     public float maxZ = 8f;
+    public float y;
 
     private void Start()
     {
-        Vector3 randomRosition = new Vector3(Random.Range(minx, maxX), 1f, Random.Range(minZ, maxZ));
+        Vector3 randomRosition = new Vector3(Random.Range(minx, maxX), y, Random.Range(minZ, maxZ));
         PhotonNetwork.Instantiate(PlayerPrefeb.name, randomRosition, Quaternion.identity);
     }
 }

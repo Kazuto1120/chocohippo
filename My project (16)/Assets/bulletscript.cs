@@ -45,7 +45,7 @@ public class bulletscript : MonoBehaviour
     {
         if (explosion != null)
         {
-            Instantiate(explosion, transform.position, Quaternion.identity); ;
+            Instantiate(explosion, transform.position, Quaternion.identity); 
         }
         minionspawn temp = GetComponent<minionspawn>();
         if (temp != null && count == 0)

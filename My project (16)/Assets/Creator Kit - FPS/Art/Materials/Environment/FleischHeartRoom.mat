@@ -2,14 +2,15 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: FleischHeartRoom
   m_Shader: {fileID: 4800000, guid: 3219742a770a043919c49d37cf14e464, type: 3}
-  m_ShaderKeywords: 
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -20,18 +21,15 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _AlbedoRamp:
-        m_Texture: {fileID: 28670419446738178, guid: ff8933603800144cfb63683dd7bd2888,
-          type: 2}
+        m_Texture: {fileID: 28670419446738178, guid: ff8933603800144cfb63683dd7bd2888, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AlbedoRamp1:
-        m_Texture: {fileID: 28392345947452060, guid: 7837947d0264e474f9f4a6f952d1a999,
-          type: 2}
+        m_Texture: {fileID: 28392345947452060, guid: 7837947d0264e474f9f4a6f952d1a999, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AlbedoRamp2:
-        m_Texture: {fileID: 28392345947452060, guid: 7837947d0264e474f9f4a6f952d1a999,
-          type: 2}
+        m_Texture: {fileID: 28392345947452060, guid: 7837947d0264e474f9f4a6f952d1a999, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -55,8 +53,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DisplacementRamp:
-        m_Texture: {fileID: 28006490866237874, guid: d5540cbcd59304a1e9be960dcdf78d68,
-          type: 2}
+        m_Texture: {fileID: 28006490866237874, guid: d5540cbcd59304a1e9be960dcdf78d68, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -80,14 +77,14 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SmoothnessRamp:
-        m_Texture: {fileID: 28945706575930640, guid: 0078fd7b1950b4c6490230b9e447605d,
-          type: 2}
+        m_Texture: {fileID: 28945706575930640, guid: 0078fd7b1950b4c6490230b9e447605d, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _VolumeNoise:
         m_Texture: {fileID: 11700000, guid: 41df2adca36624d8bac73673f98147f9, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _AlbedoRamp1Index: 3
     - _AlbedoRamp2Index: 3
@@ -118,3 +115,4 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OctaveIndex: {r: 2, g: 1, b: 2, a: 2}
+  m_BuildTextureStacks: []
