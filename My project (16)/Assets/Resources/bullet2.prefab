@@ -519,7 +519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: 0}
   rb: {fileID: 1116884714778751103}
-  speed: 20
+  speed: 10
   playerlayer:
     serializedVersion: 2
     m_Bits: 128
@@ -527,7 +527,7 @@ MonoBehaviour:
   playerInsightRange: 0
   rotatespeed: 6
   explosion: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  damage: 0
+  damage: 2
   range: 10
 --- !u!114 &1116884714778751095
 MonoBehaviour:
