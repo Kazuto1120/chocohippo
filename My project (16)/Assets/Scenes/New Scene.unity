@@ -320,7 +320,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42682
+  m_Name: pb_Mesh24460
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -552,7 +552,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-48970
+  m_Name: pb_Mesh-1278
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1112,6 +1112,10 @@ PrefabInstance:
     - target: {fileID: 1116884714778751093, guid: 196bacbfdbb82664babc2909fc47b916, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116884714778751095, guid: 196bacbfdbb82664babc2909fc47b916, type: 3}
+      propertyPath: sceneViewId
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1116884714778751096, guid: 196bacbfdbb82664babc2909fc47b916, type: 3}
       propertyPath: m_Mesh
