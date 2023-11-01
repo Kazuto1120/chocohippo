@@ -38,6 +38,8 @@ public class boss2movement : MonoBehaviour
 
     public float timebetweenattacks;
     bool alreadyattack;
+    public int damage = 10;
+    public float bounceForce = 2;
 
     private void Awake()
     {
@@ -193,6 +195,24 @@ public class boss2movement : MonoBehaviour
             iding = false;
         }
 
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+
+        if (collision.collider.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<takedamage>().Takedamage(damage);
+        }
+
+        Vector3 bounceDirection = (transform.position - collision.contacts[0].point).normalized;
+        GetComponent<Rigidbody>().AddForce(bounceDirection * bounceForce, ForceMode.Impulse);
+        StartCoroutine(StopBounceForce());
+    }
+    private IEnumerator StopBounceForce()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        GetComponent<Rigidbody>().velocity = Vector3.zero;
     }
     public void takedamage(float x)
     {
