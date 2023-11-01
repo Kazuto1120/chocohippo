@@ -3102,8 +3102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66eeeb58341ad6f4585e32130419e867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  radius: 12
+  object_speed: 3
+  radius: 45
 --- !u!135 &269277261
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4090,7 +4090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66eeeb58341ad6f4585e32130419e867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  object_speed: 3
   radius: 12
 --- !u!135 &378085520
 SphereCollider:
@@ -8475,8 +8475,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66eeeb58341ad6f4585e32130419e867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  radius: 12
+  object_speed: 3
+  radius: 10
 --- !u!135 &913537605
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9271,8 +9271,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66eeeb58341ad6f4585e32130419e867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  radius: 12
+  object_speed: 3
+  radius: 33
 --- !u!135 &990245248
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11583,8 +11583,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66eeeb58341ad6f4585e32130419e867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  radius: 12
+  object_speed: 3
+  radius: 9
 --- !u!135 &1151830288
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13001,8 +13001,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66eeeb58341ad6f4585e32130419e867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  radius: 12
+  object_speed: 3
+  radius: 4
 --- !u!135 &1295886551
 SphereCollider:
   m_ObjectHideFlags: 0
