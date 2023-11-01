@@ -209,6 +209,7 @@ public class boss3movement : MonoBehaviour
     }
     public void takedamage(float x)
     {
+        if(!bury)
         view.RPC("takedamage2", RpcTarget.AllBuffered, x);
     }
     [PunRPC]
