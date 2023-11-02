@@ -114,9 +114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fd98b815734df844a043fff035bf533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 80
+  lookRadius: 150
   look: 0
-  attackRadius: 30
+  attackRadius: 40
   view: {fileID: 4828086408300698893}
   maxhealth: 1000
   health: 100
@@ -135,8 +135,10 @@ MonoBehaviour:
   animator: {fileID: 4828086409276736453}
   animatortwo: {fileID: 0}
   walkpoint: {x: 0, y: 0, z: 0}
-  walkrange: 100
+  walkrange: 150
   timebetweenattacks: 1
+  damage: 10
+  bounceForce: 2
 --- !u!114 &4828086408300698893
 MonoBehaviour:
   m_ObjectHideFlags: 0

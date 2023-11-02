@@ -224,15 +224,6 @@ public class boss2movement : MonoBehaviour
         lookRadius = lookRadius * 5;
         Debug.Log(x);
         health = health - x;
-        tempD += x;
-        if (tempD >= 75)
-        {
-            if (0 > Random.RandomRange(-10, 10) && health <= maxhealth / 2)
-            {
-                GetComponent<enemymovement>().totalminion += 1;
-            }
-            tempD = 0;
-        }
         view.RPC("sethealth", RpcTarget.AllBuffered);
         if (health <= 0)
         {

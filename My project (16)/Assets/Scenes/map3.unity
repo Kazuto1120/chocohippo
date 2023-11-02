@@ -317,7 +317,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1016807187}
   - component: {fileID: 1016807186}
-  - component: {fileID: 1016807185}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -325,14 +324,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1016807185
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1016807184}
-  m_Enabled: 1
 --- !u!20 &1016807186
 Camera:
   m_ObjectHideFlags: 0
@@ -483,6 +474,14 @@ PrefabInstance:
     - target: {fileID: 3615160558221562580, guid: b2022284c71a21f469795796a2c94f20, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615160558221562583, guid: b2022284c71a21f469795796a2c94f20, type: 3}
+      propertyPath: lookRadius
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615160558221562583, guid: b2022284c71a21f469795796a2c94f20, type: 3}
+      propertyPath: attackRadius
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3615160558221562601, guid: b2022284c71a21f469795796a2c94f20, type: 3}
       propertyPath: sceneViewId

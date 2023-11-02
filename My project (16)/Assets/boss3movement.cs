@@ -41,6 +41,8 @@ public class boss3movement : MonoBehaviour
     public int damage = 10;
     public float bounceForce = 2;
     public bool bury = false;
+    public float speed = 20;
+    public ParticleSystem particle;
 
     private void Awake()
     {
@@ -48,6 +50,8 @@ public class boss3movement : MonoBehaviour
     }
     private void Start()
     {
+        particle.Stop();
+        agent.speed = speed;
         look = lookRadius;
         health = maxhealth;
         view = GetComponent<PhotonView>();
@@ -55,8 +59,16 @@ public class boss3movement : MonoBehaviour
         view.RPC("sethealth", RpcTarget.AllBuffered);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
+        if (bury||!iding)
+        {
+            particle.Play();
+        }
+        else
+        {
+            particle.Stop();
+        }
         playerInsightRange = Physics.CheckSphere(transform.position, lookRadius, playerlayer);
         Collider[] playerCollider = Physics.OverlapSphere(transform.position, lookRadius, playerlayer);
         if (playerCollider.Length > 0)
@@ -119,8 +131,10 @@ public class boss3movement : MonoBehaviour
         }
         else if (!iding)
         {
-            agent.SetDestination(walkpoint);
             
+            agent.SetDestination(walkpoint);
+            agent.speed = speed;
+            bury = true;
             transform.LookAt(walkpoint);
         }
         else
@@ -137,7 +151,10 @@ public class boss3movement : MonoBehaviour
     }
     private void chasePlayer()
     {
+        
+        agent.speed = 2 * speed;
         animator.SetBool("moving", true);
+        Debug.Log("1");
         bury = true;
         agent.SetDestination(playercharacter.transform.position);
         transform.LookAt(playercharacter.transform.position);
@@ -145,10 +162,23 @@ public class boss3movement : MonoBehaviour
     }
     private void attackPlayer()
     {
+        
         animator.SetBool("moving", false);
         bury = false;
+        Debug.Log("2");
         animator.SetTrigger("attack");
-
+        Collider[]players = Physics.OverlapSphere(transform.position, attackRadius, playerlayer);
+        if(players.Length > 0&&speed > 10)
+        {
+            speed = speed / 10;
+            Invoke(nameof(speedreset), timebetweenattacks * 2);
+        }
+        for (int i = 0; i < players.Length; ++i)
+        {
+            players[i].GetComponent<playerMovement>().Takedamage(damage);
+            players[i] = null;
+        }
+        
         agent.SetDestination(transform.position);
         transform.LookAt(playercharacter.transform.position);
         if (!alreadyattack)
@@ -157,12 +187,17 @@ public class boss3movement : MonoBehaviour
             Invoke(nameof(resetattack), timebetweenattacks);
         }
     }
+    public void speedreset()
+    {
+        speed = speed * 10;
+    }
     
     private void idle()
     {
         iding = true;
         animator.SetBool("moving", false);
         bury = false;
+
     }
     private void idle2()
     {
@@ -185,6 +220,7 @@ public class boss3movement : MonoBehaviour
             walkPointset = true;
             iding = false;
             animator.SetBool("moving", true);
+            Debug.Log("4");
             bury = true;
         }
 
@@ -209,24 +245,15 @@ public class boss3movement : MonoBehaviour
     }
     public void takedamage(float x)
     {
-        if(!bury)
+        if(!bury||iding)
         view.RPC("takedamage2", RpcTarget.AllBuffered, x);
     }
     [PunRPC]
     private void takedamage2(float x)
     {
         lookRadius = lookRadius * 5;
-        Debug.Log(x);
         health = health - x;
-        tempD += x;
-        if (tempD >= 75)
-        {
-            if (0 > Random.RandomRange(-10, 10) && health <= maxhealth / 2)
-            {
-                GetComponent<enemymovement>().totalminion += 1;
-            }
-            tempD = 0;
-        }
+        
         view.RPC("sethealth", RpcTarget.AllBuffered);
         if (health <= 0)
         {

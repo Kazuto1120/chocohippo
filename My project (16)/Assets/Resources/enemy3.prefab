@@ -4918,7 +4918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookRadius: 80
   look: 0
-  attackRadius: 20
+  attackRadius: 100
   view: {fileID: 3615160558221562601}
   maxhealth: 1000
   health: 100
@@ -4938,10 +4938,12 @@ MonoBehaviour:
   animatortwo: {fileID: 0}
   walkpoint: {x: 0, y: 0, z: 0}
   walkrange: 150
-  timebetweenattacks: 2
+  timebetweenattacks: 3
   damage: 10
   bounceForce: 2
   bury: 0
+  speed: 20
+  particle: {fileID: 3615160557716758649}
 --- !u!114 &3615160558221562601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4979,7 +4981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PositionModel:
-    SynchronizeEnabled: 0
+    SynchronizeEnabled: 1
     TeleportEnabled: 1
     TeleportIfDistanceGreaterThan: 3
     InterpolateOption: 2
@@ -4990,7 +4992,7 @@ MonoBehaviour:
     ExtrapolateIncludingRoundTripTime: 1
     ExtrapolateNumberOfStoredPositions: 1
   m_RotationModel:
-    SynchronizeEnabled: 0
+    SynchronizeEnabled: 1
     InterpolateOption: 1
     InterpolateRotateTowardsSpeed: 180
     InterpolateLerpSpeed: 5
