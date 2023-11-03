@@ -103,6 +103,7 @@ public class minion : MonoBehaviour
         if (Physics.Raycast(walkpoint, -transform.up, 2f, ground))
         {
             walkPointset = true;
+            Invoke(nameof(Searchwalkpoint), 10f);
         }
         
     }

@@ -63,11 +63,11 @@ public class boss3movement : MonoBehaviour
     {
         if (bury||!iding)
         {
-            particle.Play();
+            particle.gameObject.SetActive(true);
         }
         else
         {
-            particle.Stop();
+            particle.gameObject.SetActive(false);
         }
         playerInsightRange = Physics.CheckSphere(transform.position, lookRadius, playerlayer);
         Collider[] playerCollider = Physics.OverlapSphere(transform.position, lookRadius, playerlayer);
@@ -165,7 +165,6 @@ public class boss3movement : MonoBehaviour
         
         animator.SetBool("moving", false);
         bury = false;
-        Debug.Log("2");
         animator.SetTrigger("attack");
         Collider[]players = Physics.OverlapSphere(transform.position, attackRadius, playerlayer);
         if(players.Length > 0&&speed > 10)
@@ -220,8 +219,9 @@ public class boss3movement : MonoBehaviour
             walkPointset = true;
             iding = false;
             animator.SetBool("moving", true);
-            Debug.Log("4");
             bury = true;
+            Invoke(nameof(Searchwalkpoint), 15f);
+
         }
 
     }
@@ -248,6 +248,7 @@ public class boss3movement : MonoBehaviour
         if(!bury||iding)
         view.RPC("takedamage2", RpcTarget.AllBuffered, x);
     }
+    
     [PunRPC]
     private void takedamage2(float x)
     {

@@ -21,7 +21,7 @@ public class boss2bullet : MonoBehaviour
 
     void Start()
     {
-        
+        StartCoroutine(lifetimedecay(lifetime));
     }
 
 
@@ -72,6 +72,6 @@ public class boss2bullet : MonoBehaviour
     private IEnumerator lifetimedecay(float life)
     {
         yield return new WaitForSeconds(life);
-        Destroy(gameObject);
+        explode();
     }
 }

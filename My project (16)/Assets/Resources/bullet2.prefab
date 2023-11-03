@@ -522,13 +522,14 @@ MonoBehaviour:
   speed: 10
   playerlayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 640
   lookRadius: 1000
   playerInsightRange: 0
   rotatespeed: 6
   explosion: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
   damage: 2
-  range: 10
+  range: 60
+  lifetime: 10
 --- !u!114 &1116884714778751095
 MonoBehaviour:
   m_ObjectHideFlags: 0
