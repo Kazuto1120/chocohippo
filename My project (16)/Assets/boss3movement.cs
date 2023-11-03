@@ -37,7 +37,7 @@ public class boss3movement : MonoBehaviour
     bool iding = false;
 
     public float timebetweenattacks;
-    bool alreadyattack;
+    bool alreadyattack = false;
     public int damage = 10;
     public float bounceForce = 2;
     public bool bury = false;
@@ -106,7 +106,7 @@ public class boss3movement : MonoBehaviour
         {
             chasePlayer();
         }
-        else
+        else if(!alreadyattack)
         {
             attackPlayer();
         }

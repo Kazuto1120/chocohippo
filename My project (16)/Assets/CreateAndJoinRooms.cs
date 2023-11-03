@@ -12,6 +12,7 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     public InputField joinInput;
     public Animator animator;
     public AudioSource audio;
+    public string name;
 
     public void CreateRoom()
     {
@@ -26,7 +27,7 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        PhotonNetwork.LoadLevel("map");
+        PhotonNetwork.LoadLevel(name);
     }
     IEnumerator Load()
     {

@@ -2249,7 +2249,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1867461088926380401, guid: f3085fcf9d2e2f140980855fbd4e208d, type: 3}
       propertyPath: maxhealth
-      value: 100
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1867461088926380401, guid: f3085fcf9d2e2f140980855fbd4e208d, type: 3}
       propertyPath: animatortwo
