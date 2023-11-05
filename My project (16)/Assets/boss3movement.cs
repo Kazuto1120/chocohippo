@@ -43,6 +43,7 @@ public class boss3movement : MonoBehaviour
     public bool bury = false;
     public float speed = 20;
     public ParticleSystem particle;
+    private RaycastHit hit;
 
     private void Awake()
     {
@@ -133,6 +134,14 @@ public class boss3movement : MonoBehaviour
         {
             
             agent.SetDestination(walkpoint);
+            
+            if(Physics.Raycast(transform.position, transform.forward, 1f))
+            {
+                Debug.Log("block");
+                Searchwalkpoint();
+            }
+            
+           
             agent.speed = speed;
             bury = true;
             transform.LookAt(walkpoint);
@@ -220,8 +229,6 @@ public class boss3movement : MonoBehaviour
             iding = false;
             animator.SetBool("moving", true);
             bury = true;
-            Invoke(nameof(Searchwalkpoint), 15f);
-
         }
 
     }

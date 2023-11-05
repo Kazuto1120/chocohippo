@@ -194,7 +194,6 @@ public class enemymovement : MonoBehaviour
         {
             walkPointset = true;
             iding = false;
-            Invoke(nameof(Searchwalkpoint), 15f);
         }
         
     }
