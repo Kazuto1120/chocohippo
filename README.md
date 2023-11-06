@@ -33,10 +33,10 @@ Click create and play the game.
 
 
 Project Contributors:
-Zixian Lin (Project Manager and Video Game Programmer I)
-Andrew Gil (Video Game designer I and Game Tester)
-Aida Khydyrova (Sound Engineer and Game Artist)
-Jorge D Lata Armijos (Game programmer II,Game designer II)
+Zixian Lin (Project Leader)
+Andrew Gil (Game Developer and Designer)
+Aida Khydyrova (Game Designer and Sound Engineer)
+Jorge D Lata Armijos (Game developer and Planner)
 
 Credit & License:
 Photo by <a href="https://unsplash.com/@carltraw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Carl Raw</a> on <a href="https://unsplash.com/photos/gaming-room-with-arcade-machines-m3hn2Kn5Bns?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
@@ -44,5 +44,7 @@ Photo by <a href="https://unsplash.com/@carltraw?utm_content=creditCopyText&utm_
 -For installation of the game.
 Youtube.com and unity.com
 
--Music license (educational purpose)
+-Music license & citation (educational purpose)
 Music by <a href="https://pixabay.com/users/paulyudin-27739282/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=157045">Pavel Bekirov</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=157045">Pixabay</a>
+
+Videnovik, Maja, et al. “Game-Based Learning in Computer Science Education: A Scoping Literature Review - International Journal of STEM Education.” SpringerOpen, Springer International Publishing, 6 Sept. 2023, stemeducationjournal.springeropen.com/articles/10.1186/s40594-023-00447-2.
