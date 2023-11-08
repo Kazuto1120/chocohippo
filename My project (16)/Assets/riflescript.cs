@@ -26,7 +26,7 @@ public class riflescript : MonoBehaviourPunCallbacks
     public playerMovement playerMovement;
     public Animator animator;
     public Image ammobar;
-
+    public weaponswitch weapon;
 
     public KeyCode shootkey = KeyCode.Mouse0;
 
@@ -113,11 +113,15 @@ public class riflescript : MonoBehaviourPunCallbacks
     }
     private void reload()
     {
-        abletofire = false;
-        bulletremain = bullet;
-        animator.SetBool("reload", true);
-        StartCoroutine(ResetReloadParameter(1f));
-        StartCoroutine(abletofired(2f));
+        if (weapon.reloadleft > 0)
+        {
+            abletofire = false;
+            bulletremain = bullet;
+            weapon.reloadleft--;
+            animator.SetBool("reload", true);
+            StartCoroutine(ResetReloadParameter(1f));
+            StartCoroutine(abletofired(2f));
+        }
         
     }
     void ResetSpread()

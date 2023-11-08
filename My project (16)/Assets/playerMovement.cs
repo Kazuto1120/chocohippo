@@ -137,5 +137,9 @@ public class playerMovement : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (health > Maxhealth)
+        {
+            health = Maxhealth;
+        }
     }
 }

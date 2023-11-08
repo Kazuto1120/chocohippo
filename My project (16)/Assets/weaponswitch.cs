@@ -11,6 +11,8 @@ public class weaponswitch : MonoBehaviourPunCallbacks
     public Camera maincamera;
     public Camera camera;
     public PhotonView view;
+    public float reloadleft = 3;
+
     
 
     public Animator animator;

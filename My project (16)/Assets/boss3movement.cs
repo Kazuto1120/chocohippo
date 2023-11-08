@@ -270,6 +270,7 @@ public class boss3movement : MonoBehaviour
             animator.SetTrigger("dead");
             StartCoroutine(DestroyAfterDelay(2f));
         }
+        
     }
     [PunRPC]
     private void sethealth()

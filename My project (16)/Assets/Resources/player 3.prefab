@@ -49489,6 +49489,7 @@ GameObject:
   - component: {fileID: 1742149660460526446}
   - component: {fileID: 1742149660460526445}
   - component: {fileID: 8303318337367412925}
+  - component: {fileID: 5550283697231646511}
   m_Layer: 8
   m_Name: weaponGameObject
   m_TagString: Untagged
@@ -49533,6 +49534,7 @@ MonoBehaviour:
   maincamera: {fileID: 1692474069779646487}
   camera: {fileID: 6892048672026471944}
   view: {fileID: 8303318337367412925}
+  reloadleft: 3
   animator: {fileID: 1742149661031223019}
 --- !u!114 &8303318337367412925
 MonoBehaviour:
@@ -49552,10 +49554,44 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 5550283697231646511}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &5550283697231646511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742149660460526447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8efc6b1d64977384eb3405357896c656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PositionModel:
+    SynchronizeEnabled: 1
+    TeleportEnabled: 1
+    TeleportIfDistanceGreaterThan: 3
+    InterpolateOption: 2
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 1
+    ExtrapolateOption: 0
+    ExtrapolateSpeed: 1
+    ExtrapolateIncludingRoundTripTime: 1
+    ExtrapolateNumberOfStoredPositions: 1
+  m_RotationModel:
+    SynchronizeEnabled: 1
+    InterpolateOption: 1
+    InterpolateRotateTowardsSpeed: 180
+    InterpolateLerpSpeed: 5
+  m_ScaleModel:
+    SynchronizeEnabled: 0
+    InterpolateOption: 0
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 0
 --- !u!1 &1742149660643541520
 GameObject:
   m_ObjectHideFlags: 0
@@ -50718,6 +50754,7 @@ MonoBehaviour:
   playerMovement: {fileID: 1742149660250355642}
   animator: {fileID: 1742149661031223019}
   ammobar: {fileID: 3216647789476824636}
+  weapon: {fileID: 1742149660460526445}
   shootkey: 323
   abletofire: 1
 --- !u!114 &5717006154096612374
@@ -50956,6 +50993,7 @@ MonoBehaviour:
   playerMovement: {fileID: 1742149660250355642}
   animator: {fileID: 1742149661031223019}
   ammobar: {fileID: 3216647789476824636}
+  weapon: {fileID: 1742149660460526445}
   shootkey: 323
   abletofire: 1
 --- !u!114 &3634633222328574197
@@ -51193,6 +51231,7 @@ MonoBehaviour:
   playerMovement: {fileID: 1742149660250355642}
   animator: {fileID: 1742149661031223019}
   ammobar: {fileID: 3216647789476824636}
+  weapon: {fileID: 1742149660460526445}
   shootkey: 323
   abletofire: 1
 --- !u!1 &7713741423589347002
@@ -51409,6 +51448,7 @@ MonoBehaviour:
   playerMovement: {fileID: 1742149660250355642}
   animator: {fileID: 1742149661031223019}
   ammobar: {fileID: 3216647789476824636}
+  weapon: {fileID: 1742149660460526445}
   shootkey: 323
   abletofire: 1
 --- !u!114 &2221520522440350687
@@ -51647,6 +51687,7 @@ MonoBehaviour:
   playerMovement: {fileID: 1742149660250355642}
   animator: {fileID: 1742149661031223019}
   ammobar: {fileID: 3216647789476824636}
+  weapon: {fileID: 1742149660460526445}
   shootkey: 323
   abletofire: 1
 --- !u!114 &299779541810773427
