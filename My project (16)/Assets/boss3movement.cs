@@ -62,7 +62,7 @@ public class boss3movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (bury||!iding)
+        if (bury)
         {
             particle.gameObject.SetActive(true);
         }
@@ -252,8 +252,10 @@ public class boss3movement : MonoBehaviour
     }
     public void takedamage(float x)
     {
-        if(!bury||iding)
-        view.RPC("takedamage2", RpcTarget.AllBuffered, x);
+        if (!bury)
+        {
+            view.RPC("takedamage2", RpcTarget.AllBuffered, x);
+        }
     }
     
     [PunRPC]
@@ -266,7 +268,6 @@ public class boss3movement : MonoBehaviour
         if (health <= 0)
         {
             animator.SetTrigger("dead");
-            animatortwo.SetTrigger("bossroom");
             StartCoroutine(DestroyAfterDelay(2f));
         }
     }
