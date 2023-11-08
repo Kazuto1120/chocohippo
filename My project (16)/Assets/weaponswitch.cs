@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine.UI;
 
 public class weaponswitch : MonoBehaviourPunCallbacks
 {
@@ -12,18 +13,20 @@ public class weaponswitch : MonoBehaviourPunCallbacks
     public Camera camera;
     public PhotonView view;
     public float reloadleft = 3;
+    public Text text;
 
     
 
     public Animator animator;
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
+        reloadupdate();
         view.RPC("selectweapon", RpcTarget.AllBuffered, weaponSelected);
     }
 
     // Update is called once per frame
-    void Update()
+         void Update()
     {
         if (!photonView.IsMine) { 
             return;}
@@ -76,7 +79,11 @@ public class weaponswitch : MonoBehaviourPunCallbacks
             }
         
     }
-   
+    public void reloadupdate()
+    {
+        text.text = reloadleft + "";
+    }
+
     void unscope()
     {
         if (view.IsMine)

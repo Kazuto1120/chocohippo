@@ -22,6 +22,7 @@ public class playerMovement : MonoBehaviour
     public LayerMask ground;
     public bool isGrounded;
     public Animator animator;
+ 
 
     public KeyCode jumpkey = KeyCode.Space;
     public KeyCode runkey = KeyCode.LeftShift;
@@ -104,7 +105,6 @@ public class playerMovement : MonoBehaviour
     }
     public void reloadplay()
     {
-        Debug.Log(" is played");
         animator.SetBool("reload", true);
         StartCoroutine(ResetReloadParameter(1f));
 

@@ -118,6 +118,7 @@ public class riflescript : MonoBehaviourPunCallbacks
             abletofire = false;
             bulletremain = bullet;
             weapon.reloadleft--;
+            weapon.reloadupdate();
             animator.SetBool("reload", true);
             StartCoroutine(ResetReloadParameter(1f));
             StartCoroutine(abletofired(2f));

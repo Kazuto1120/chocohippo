@@ -105,7 +105,7 @@ MonoBehaviour:
   look: 0
   attackRadius: 50
   view: {fileID: 2905192534558543949}
-  maxhealth: 1000
+  maxhealth: 2000
   health: 100
   slider: {fileID: 8713316434242808895}
   minion: {fileID: 7335185612347493065, guid: d98ae84ba0ad05444a33b153a4c9a715, type: 3}

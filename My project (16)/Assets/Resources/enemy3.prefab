@@ -4920,7 +4920,7 @@ MonoBehaviour:
   look: 0
   attackRadius: 100
   view: {fileID: 3615160558221562601}
-  maxhealth: 1000
+  maxhealth: 2000
   health: 100
   slider: {fileID: 5678763185639114587}
   minion: {fileID: 0}

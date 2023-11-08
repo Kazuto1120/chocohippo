@@ -56,10 +56,6 @@ public class boss2movement : MonoBehaviour
 
     private void Update()
     {
-        if (health <= (maxhealth / 2) && currentminion < totalminion)
-        {
-            attackstage2();
-        }
         playerInsightRange = Physics.CheckSphere(transform.position, lookRadius, playerlayer);
         Collider[] playerCollider = Physics.OverlapSphere(transform.position, lookRadius, playerlayer);
         if (playerCollider.Length > 0)
@@ -153,21 +149,7 @@ public class boss2movement : MonoBehaviour
             Invoke(nameof(resetattack), timebetweenattacks);
         }
     }
-    private void attackstage2()
-    {
-        animator.SetTrigger("attack");
-
-        Collider[] playerColliderh = Physics.OverlapSphere(transform.position, 1000f, playerlayer);
-        if (playerColliderh.Length > 0)
-        {
-            playercharacter = playerColliderh[0];
-        }
-        transform.LookAt(playercharacter.transform.position);
-        attack.GetComponent<enemyattack>().shoot2(playercharacter);
-        currentminion++;
-
-
-    }
+   
     private void idle()
     {
         iding = true;
