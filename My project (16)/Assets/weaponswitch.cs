@@ -79,6 +79,11 @@ public class weaponswitch : MonoBehaviourPunCallbacks
             }
         
     }
+    public void addreload(int x)
+    {
+        reloadleft += x;
+        reloadupdate();
+    }
     public void reloadupdate()
     {
         text.text = reloadleft + "";
