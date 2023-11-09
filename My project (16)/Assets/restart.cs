@@ -11,6 +11,7 @@ public class restart : MonoBehaviourPunCallbacks
     public Animator animator;
     private void Awake()
     {
+        if(PhotonNetwork.IsConnected)
         PhotonNetwork.LeaveRoom();
         Cursor.lockState = CursorLockMode.None;
     }
