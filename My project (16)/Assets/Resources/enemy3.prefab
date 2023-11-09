@@ -108,7 +108,7 @@ MonoBehaviour:
   look: 0
   attackRadius: 100
   view: {fileID: 3615160558221562601}
-  maxhealth: 2000
+  maxhealth: 4000
   health: 100
   slider: {fileID: 5678763185639114587}
   minion: {fileID: 0}
@@ -127,7 +127,7 @@ MonoBehaviour:
   walkpoint: {x: 0, y: 0, z: 0}
   walkrange: 150
   timebetweenattacks: 4
-  damage: 3
+  damage: 10
   bounceForce: 2
   bury: 0
   speed: 20
