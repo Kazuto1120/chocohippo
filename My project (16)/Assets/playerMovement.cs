@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class playerMovement : MonoBehaviour
 {
@@ -135,6 +136,7 @@ public class playerMovement : MonoBehaviour
         healthCircle();
         if (health <= 0)
         {
+            SceneManager.LoadScene("gameover");
             Destroy(gameObject);
         }
         if (health > Maxhealth)

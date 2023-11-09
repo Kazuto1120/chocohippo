@@ -49403,7 +49403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthcircle: {fileID: 2301928547158695067}
-  Maxhealth: 100
+  Maxhealth: 10
   health: 100
   player: {fileID: 1742149660250355641}
   body: {fileID: 1742149660250355643}
