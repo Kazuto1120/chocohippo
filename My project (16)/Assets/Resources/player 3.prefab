@@ -49512,6 +49512,7 @@ MonoBehaviour:
   jumpheight: 2
   walkspeed: 8
   air: 0
+  dead: 0
   groundedCheck: {fileID: 1742149661111572014}
   groundDistance: 0.4
   ground:
