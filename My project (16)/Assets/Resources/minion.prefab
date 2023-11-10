@@ -596,6 +596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 493a1382825c6a543ba7906c665d98d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio: {fileID: 0}
   lookRadius: 0
   attackRadius: 0
   damage: 100
@@ -1726,6 +1727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 493a1382825c6a543ba7906c665d98d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio: {fileID: 0}
   lookRadius: 80
   attackRadius: 0
   damage: 2

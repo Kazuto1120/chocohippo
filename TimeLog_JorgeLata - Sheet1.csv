@@ -46,4 +46,4 @@ Date,Time,Hours,Task completed,Next Step.
 11-2-2023,6am-8am &10am-11am & 7pm-10pm,6,completing the supervisor evaluation form and supervisor meeting,work on the slides after 7pm.
 11-5-2023,8pm-9pm,1,updating the readme file and finishing the presentation slides for the group and submitting the work tonight,maybe create another map scene.
 11-8-2023,4pm-8pm & 9pm-10pm,5,trying to fix a server connection problem and searching unity solution and consulted to Aida for help, unable to fix the problem.
-11-9-2023,7am-10am,3,the connection problem was fixed by resetting  unity to default and extracting the most recent files from github & new problem arised from the enemymovement.cs,consult to project manager and google solutions. 
+11-9-2023,7am-10am & 7pm-10pm,6,the connection problem was fixed by resetting  unity to default and extracting the most recent files from github & new problem arised from the enemymovement.cs & adding C# script to change the size of gameobjects,consult to project manager and google solutions. 
