@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 
 
@@ -23,6 +24,12 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     {
         Debug.Log("attempt to join");
         StartCoroutine(Load2());
+    }
+    public void gototutorial()
+    {
+        audio.Play();
+        animator.SetTrigger("start");
+        Invoke(nameof(goto2), 1f);
     }
 
     public override void OnJoinedRoom()
@@ -48,6 +55,10 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
         PhotonNetwork.JoinRoom(joinInput.text);
         PhotonNetwork.CreateRoom(joinInput.text);
 
+    }
+    private void goto2()
+    {
+        SceneManager.LoadScene("Level1");
     }
 
 

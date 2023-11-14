@@ -84,6 +84,22 @@ public class camerafreemovement : MonoBehaviour
     }
     public void back()
     {
+        Invoke(nameof(back2), 1f);
+    }
+    private void back2()
+    {
         SceneManager.LoadScene("lobby");
     }
+    public void add(float x)
+    {
+        sensitivity += x;
+        if (sensitivity > sensitivityMax)
+            sensitivity = sensitivityMax;
+        sliderupdate();
+    }
+    private void sliderupdate()
+    {
+        Slider.value = sensitivity;
+    }
+
 }
