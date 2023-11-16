@@ -263,7 +263,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32736
+  m_Name: pb_Mesh46102
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -455,7 +455,8 @@ MonoBehaviour:
   maxX: 250
   minZ: -250
   maxZ: 250
-  y: 13.4
+  y: 14.5
+  amount: 5
 --- !u!4 &593782565
 Transform:
   m_ObjectHideFlags: 0
