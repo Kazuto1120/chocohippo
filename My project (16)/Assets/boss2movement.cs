@@ -26,6 +26,7 @@ public class boss2movement : MonoBehaviour
     public GameObject attack;
     public Animator animator;
     public Animator animatortwo;
+    public AudioSource audio;
 
     private float idle2Chance = 0.25f;
     private float timeBetweenIdle2Checks = 1.0f;
@@ -211,6 +212,7 @@ public class boss2movement : MonoBehaviour
         if (health <= 0)
         {
             animator.SetTrigger("dead");
+            audio.Play();
             animatortwo.SetTrigger("bossroom");
             StartCoroutine(DestroyAfterDelay(2f));
         }

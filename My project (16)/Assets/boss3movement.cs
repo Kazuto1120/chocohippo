@@ -10,6 +10,7 @@ public class boss3movement : MonoBehaviour
     public float lookRadius, look, attackRadius;
     bool playerInsightRange, playerinattackrange;
     Collider playercharacter;
+    public AudioSource audio;
 
     public PhotonView view;
     public float maxhealth = 1000;
@@ -268,6 +269,7 @@ public class boss3movement : MonoBehaviour
         if (health <= 0)
         {
             animator.SetTrigger("dead");
+            audio.Play();
             StartCoroutine(DestroyAfterDelay(2f));
         }
         
@@ -280,6 +282,7 @@ public class boss3movement : MonoBehaviour
     private IEnumerator DestroyAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
+
         PhotonNetwork.Destroy(gameObject);
     }
 
