@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ObjectJump : MonoBehaviour
 {
     public float speed = 5f;
@@ -10,8 +11,12 @@ public class ObjectJump : MonoBehaviour
 
     void Start()
     {
+        
+      //creating a random number and casting int to float
+        int t = UnityEngine.Random.Range(0, 12);
+        float target = (float)t;
         // Set the initial target position
-        targetPosition = new Vector3(5f, 0f, 0f);
+        targetPosition = new Vector3(5f, target, 0f);
     }
 
     void Update()
