@@ -17,10 +17,11 @@ public class boss2bullet : MonoBehaviour
     private RaycastHit hit;
     public GameObject explosion;
     public float damage , range;
+    public float lifetime = 10f;
 
     void Start()
     {
-        
+        StartCoroutine(lifetimedecay(lifetime));
     }
 
 
@@ -34,8 +35,9 @@ public class boss2bullet : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.collider.name);
-        explode();
+        if (collision.gameObject.CompareTag("Player")) {
+            Debug.Log(collision.collider.name);
+            explode(); }
     }
     private void directionM()
     {
@@ -62,8 +64,14 @@ public class boss2bullet : MonoBehaviour
         Collider[] players = Physics.OverlapSphere(transform.position, range, playerlayer);
         for (int i = 0; i < players.Length; ++i)
         {
+            Debug.Log("damage");
             players[i].GetComponent<playerMovement>().Takedamage(damage);
         }
-        PhotonNetwork.Destroy(gameObject);
+        Destroy(gameObject);
+    }
+    private IEnumerator lifetimedecay(float life)
+    {
+        yield return new WaitForSeconds(life);
+        explode();
     }
 }

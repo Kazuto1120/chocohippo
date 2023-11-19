@@ -100,7 +100,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.2
+  m_Radius: 0.3
   m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!114 &4828086408300698894
 MonoBehaviour:
@@ -114,11 +114,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fd98b815734df844a043fff035bf533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 80
+  lookRadius: 150
   look: 0
-  attackRadius: 30
+  attackRadius: 40
   view: {fileID: 4828086408300698893}
-  maxhealth: 1000
+  maxhealth: 8000
   health: 100
   slider: {fileID: 3914484404198816692}
   minion: {fileID: 7800905539297599776, guid: 6f92cd7a3a8e8054eb004af75b5260e7, type: 3}
@@ -135,8 +135,10 @@ MonoBehaviour:
   animator: {fileID: 4828086409276736453}
   animatortwo: {fileID: 0}
   walkpoint: {x: 0, y: 0, z: 0}
-  walkrange: 100
+  walkrange: 150
   timebetweenattacks: 1
+  damage: 10
+  bounceForce: 10
 --- !u!114 &4828086408300698893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,7 +173,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 6
+  m_Speed: 8
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

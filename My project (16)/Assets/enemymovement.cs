@@ -28,6 +28,7 @@ public class enemymovement : MonoBehaviour
     public GameObject attack;
     public Animator animator;
     public Animator animatortwo;
+    public AudioSource audio;
 
     private float idle2Chance = 0.25f;
     private float timeBetweenIdle2Checks = 1.0f;
@@ -40,6 +41,8 @@ public class enemymovement : MonoBehaviour
 
     public float timebetweenattacks;
     bool alreadyattack;
+    public int damage = 10;
+    public float bounceForce = 2;
 
     private void Awake()
     {
@@ -195,6 +198,24 @@ public class enemymovement : MonoBehaviour
         }
         
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+
+        if (collision.collider.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<takedamage>().Takedamage(damage);
+        }
+
+        Vector3 bounceDirection = (transform.position - collision.contacts[0].point).normalized;
+        GetComponent<Rigidbody>().AddForce(bounceDirection * bounceForce, ForceMode.Impulse);
+        StartCoroutine(StopBounceForce());
+    }
+    private IEnumerator StopBounceForce()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        GetComponent<Rigidbody>().velocity = Vector3.zero;
+    }
     public void takedamage(float x)
     {
         view.RPC("takedamage2", RpcTarget.AllBuffered, x);
@@ -218,6 +239,7 @@ public class enemymovement : MonoBehaviour
         if (health <= 0)
         {
             animator.SetTrigger("dead");
+            audio.Play();
             animatortwo.SetTrigger("bossroom");
             StartCoroutine(DestroyAfterDelay(2f));
         }

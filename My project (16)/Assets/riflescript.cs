@@ -26,7 +26,7 @@ public class riflescript : MonoBehaviourPunCallbacks
     public playerMovement playerMovement;
     public Animator animator;
     public Image ammobar;
-
+    public weaponswitch weapon;
 
     public KeyCode shootkey = KeyCode.Mouse0;
 
@@ -94,6 +94,11 @@ public class riflescript : MonoBehaviourPunCallbacks
                 {
                     boss2.takedamage(damage);
                 }
+                boss3movement boss3 = hit.transform.GetComponent<boss3movement>();
+                if (boss3 != null)
+                {
+                    boss3.takedamage(damage);
+                }
                 minion temp = hit.transform.GetComponent<minion>();
                 if (temp != null)
                 {
@@ -108,11 +113,16 @@ public class riflescript : MonoBehaviourPunCallbacks
     }
     private void reload()
     {
-        abletofire = false;
-        bulletremain = bullet;
-        animator.SetBool("reload", true);
-        StartCoroutine(ResetReloadParameter(1f));
-        StartCoroutine(abletofired(2f));
+        if (weapon.reloadleft > 0)
+        {
+            abletofire = false;
+            bulletremain = bullet;
+            weapon.reloadleft--;
+            weapon.reloadupdate();
+            animator.SetBool("reload", true);
+            StartCoroutine(ResetReloadParameter(1f));
+            StartCoroutine(abletofired(2f));
+        }
         
     }
     void ResetSpread()
