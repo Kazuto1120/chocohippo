@@ -7,6 +7,7 @@ using Photon.Pun;
 
 public class minion : MonoBehaviour
 {
+    public AudioSource audio;
     public float lookRadius, attackRadius;
     bool playerInsightRange, playerinattackrange;
     Collider playercharacter;
@@ -103,12 +104,13 @@ public class minion : MonoBehaviour
         if (Physics.Raycast(walkpoint, -transform.up, 2f, ground))
         {
             walkPointset = true;
+
         }
         
     }
     private void OnCollisionEnter(Collision collision)
     {
-    
+        audio.Play();
         if (collision.collider.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<takedamage>().Takedamage(damage);

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class playerMovement : MonoBehaviour
 {
@@ -16,12 +17,16 @@ public class playerMovement : MonoBehaviour
     public float jumpheight = 3f;
     public float walkspeed = 5f;
     public bool air = false;
+    public bool dead = false;
 
     public Transform groundedCheck;
     public float groundDistance = 0.4f;
     public LayerMask ground;
     public bool isGrounded;
     public Animator animator;
+    public Animator fade;
+    public AudioSource audio;
+ 
 
     public KeyCode jumpkey = KeyCode.Space;
     public KeyCode runkey = KeyCode.LeftShift;
@@ -104,7 +109,6 @@ public class playerMovement : MonoBehaviour
     }
     public void reloadplay()
     {
-        Debug.Log(" is played");
         animator.SetBool("reload", true);
         StartCoroutine(ResetReloadParameter(1f));
 
@@ -133,9 +137,22 @@ public class playerMovement : MonoBehaviour
         Debug.Log("take damage "+damage);
         health = health - damage;
         healthCircle();
-        if (health <= 0)
+        if (health <= 0&&!dead)
         {
-            Destroy(gameObject);
+            dead = true;
+            fade.SetTrigger("dead");
+            audio.Play();
+            Invoke(nameof(Destroyobject), 2f);
+        }
+        if (health > Maxhealth)
+        {
+            health = Maxhealth;
         }
     }
+    private void Destroyobject()
+    {
+        SceneManager.LoadScene("gameover");
+        Destroy(gameObject);
+    }
+
 }
