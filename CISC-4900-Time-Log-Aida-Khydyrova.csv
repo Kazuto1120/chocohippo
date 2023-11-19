@@ -31,4 +31,10 @@ Date,Time,Hours,Description,Total
 10/31/2023,5:00PM - 10:30PM,5.5,Made changes to a tail animation successfully and applying to the second failed enemy.,
 11/1/2023,10:00PM - 11:00PM,1,Working on presentation slides.,
 11/2/2023,10:00AM - 11:00AM,1,Had meeting with professor on current progress and future plans,11 Week: 11/02-11/08
-10/5/2023,10:00AM - 8:00PM,10,Had to remake tails for animating movement and figuring out how to animate them cleanly without any bugs and without showing armature. Also looking into how to make a new enemy.,
+11/5/2023,10:00AM - 8:00PM,10,Had to remake tails for animating movement and figuring out how to animate them cleanly without any bugs and without showing armature. Also looking into how to make a new enemy.,
+11/8/2023,6:00PM - 10:00PM,4,Was given idea to make a new enemy for a new level and began thinking of ways to make it. Had a call with Jorge on testing game and advice on troubleshooting,
+11/9/2023,2:00PM - 5:00PM,3,Looking into how to make a new enemy (shape and movement).,15 Week 11/09 - 11/15
+11/12/2023,3:00PM - 10:00PM,7,Trying out new possibilities for the new enemy. Had to restart several times and had no luck with making armature move with figure. Had meeting with groupmates on progress and demo 2 submission 9-10PM,
+11/13/2023,"3:30PM - 4:30PM, 6:30PM - 9:30PM",4,Figuring out new position and options of the model and making sure everything fits before moving to next step which is making a smooth animation,
+11/14/2023,1:00PM - 2:00PM,1,Making the animation and the head shape to the armature making sure it moves with the armature.,
+11/15/2023,5:00PM - 10:00PM,5,Trying to animate the snake had to try and move each individual bone. However there is an issue with animating Bone 3 and beyond to the tail. Had to restart several times to no luck. Will try again tomorrow to rebuild the armature and move the bones properly.,5 Week: 11/16-11/22
