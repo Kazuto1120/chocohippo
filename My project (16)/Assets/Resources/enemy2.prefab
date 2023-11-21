@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 4828086408300698892}
   - component: {fileID: 4828086408300698891}
   - component: {fileID: 6418754185539736953}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: enemy2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,6 +134,7 @@ MonoBehaviour:
   attack: {fileID: 2761667183614819066}
   animator: {fileID: 4828086409276736453}
   animatortwo: {fileID: 0}
+  audio: {fileID: 0}
   walkpoint: {x: 0, y: 0, z: 0}
   walkrange: 150
   timebetweenattacks: 1

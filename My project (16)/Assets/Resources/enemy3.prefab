@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3615160558221562583}
   - component: {fileID: 3615160558221562601}
   - component: {fileID: 2060199788163549886}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: enemy3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,6 +107,7 @@ MonoBehaviour:
   lookRadius: 80
   look: 0
   attackRadius: 100
+  audio: {fileID: 0}
   view: {fileID: 3615160558221562601}
   maxhealth: 4000
   health: 100
