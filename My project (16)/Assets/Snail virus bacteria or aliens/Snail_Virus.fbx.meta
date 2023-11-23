@@ -1,0 +1,718 @@
+fileFormatVersion: 2
+guid: 593ecfc9b4ebe8f4ba5da8ddcae29138
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Eye_bone
+  - first:
+      1: 100002
+    second: Finger1_L_Bone
+  - first:
+      1: 100004
+    second: Finger1_R_Bone
+  - first:
+      1: 100006
+    second: Finger2_L_Bone
+  - first:
+      1: 100008
+    second: Finger2_R_Bone
+  - first:
+      1: 100010
+    second: Finger3_L_Bone
+  - first:
+      1: 100012
+    second: Finger3_R_Bone
+  - first:
+      1: 100014
+    second: Neck1_Bone
+  - first:
+      1: 100016
+    second: Neck2_Bone
+  - first:
+      1: 100018
+    second: Neck3_Bone
+  - first:
+      1: 100020
+    second: Neck4_Bone
+  - first:
+      1: 100022
+    second: Root_Bone
+  - first:
+      1: 100024
+    second: Shell_Bone
+  - first:
+      1: 100026
+    second: Snail
+  - first:
+      1: 100028
+    second: //RootNode
+  - first:
+      1: 100030
+    second: Tail1_Bone
+  - first:
+      1: 100032
+    second: Tail2_Bone
+  - first:
+      4: 400000
+    second: Eye_bone
+  - first:
+      4: 400002
+    second: Finger1_L_Bone
+  - first:
+      4: 400004
+    second: Finger1_R_Bone
+  - first:
+      4: 400006
+    second: Finger2_L_Bone
+  - first:
+      4: 400008
+    second: Finger2_R_Bone
+  - first:
+      4: 400010
+    second: Finger3_L_Bone
+  - first:
+      4: 400012
+    second: Finger3_R_Bone
+  - first:
+      4: 400014
+    second: Neck1_Bone
+  - first:
+      4: 400016
+    second: Neck2_Bone
+  - first:
+      4: 400018
+    second: Neck3_Bone
+  - first:
+      4: 400020
+    second: Neck4_Bone
+  - first:
+      4: 400022
+    second: Root_Bone
+  - first:
+      4: 400024
+    second: Shell_Bone
+  - first:
+      4: 400026
+    second: Snail
+  - first:
+      4: 400028
+    second: //RootNode
+  - first:
+      4: 400030
+    second: Tail1_Bone
+  - first:
+      4: 400032
+    second: Tail2_Bone
+  - first:
+      21: 2100000
+    second: Snail_virus_mat
+  - first:
+      43: 4300000
+    second: Snail
+  - first:
+      74: 7400000
+    second: appearance
+  - first:
+      74: 7400002
+    second: idle1
+  - first:
+      74: 7400004
+    second: idle2
+  - first:
+      74: 7400006
+    second: idle3
+  - first:
+      74: 7400008
+    second: "atta\u0441k1"
+  - first:
+      74: 7400010
+    second: "atta\u0441k2"
+  - first:
+      74: 7400012
+    second: jump
+  - first:
+      74: 7400014
+    second: creep
+  - first:
+      74: 7400016
+    second: death
+  - first:
+      74: 7400018
+    second: disappearance
+  - first:
+      74: 7400020
+    second: FULL
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      111: 11100000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Snail
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: appearance
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle1
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 41
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle2
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 101
+      lastFrame: 220
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle3
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 221
+      lastFrame: 350
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: "atta\u0441k1"
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 351
+      lastFrame: 415
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: "atta\u0441k2"
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 416
+      lastFrame: 460
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: jump
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 461
+      lastFrame: 503
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: creep
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 504
+      lastFrame: 536
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: death
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 537
+      lastFrame: 595
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: disappearance
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 596
+      lastFrame: 635
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FULL
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 635
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: second
+      takeName: Take 001
+      internalID: -6577145938085917429
+      firstFrame: 276
+      lastFrame: 350
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: first
+      takeName: Take 001
+      internalID: 1053076475599293515
+      firstFrame: 221
+      lastFrame: 275
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: Snail_Virus(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Snail
+      parentName: Snail_Virus(Clone)
+      position: {x: -0, y: 0.06250137, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Bone
+      parentName: Snail_Virus(Clone)
+      position: {x: -0.000000010374933, y: 0.08997474, z: -0.2375327}
+      rotation: {x: -0.0028511693, y: 0.7071011, z: -0.0028511998, w: 0.70710105}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: Neck1_Bone
+      parentName: Root_Bone
+      position: {x: -0.32770023, y: -0.0067915344, z: -0.000000047683713}
+      rotation: {x: -0.000000008731148, y: -0.000000029802319, z: -0.5271459, w: 0.84977484}
+      scale: {x: 0.99999976, y: 0.99999994, z: 0.99999994}
+    - name: Neck2_Bone
+      parentName: Neck1_Bone
+      position: {x: -0.1446242, y: -0.000000019073486, z: -0.000000009536743}
+      rotation: {x: -0.0000000141400776, y: -0.00000008917817, z: -0.35225675, w: 0.93590343}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1.0000004}
+    - name: Neck3_Bone
+      parentName: Neck2_Bone
+      position: {x: -0.13094608, y: 0, z: -0.000000057220458}
+      rotation: {x: 0.00006626173, y: -0.00013888864, z: -0.11189756, w: 0.9937197}
+      scale: {x: 0.9999996, y: 1.0000014, z: 1.0000005}
+    - name: Neck4_Bone
+      parentName: Neck3_Bone
+      position: {x: -0.13266021, y: 0.00018299102, z: 0.00018222809}
+      rotation: {x: 0.00000010791447, y: -0.000000032867383, z: -0.055821687, w: 0.99844074}
+      scale: {x: 1.0000004, y: 0.9999985, z: 0.9999996}
+    - name: Eye_bone
+      parentName: Neck4_Bone
+      position: {x: -0.16638562, y: 0.009494858, z: 0}
+      rotation: {x: 0.00000012708949, y: -0.000000095558455, z: 0.61747336, w: 0.7865919}
+      scale: {x: 0.999999, y: 0.99999934, z: 0.99999964}
+    - name: Shell_Bone
+      parentName: Root_Bone
+      position: {x: -0.12924753, y: -0.03235241, z: -0.000000014305114}
+      rotation: {x: 0.000000020721926, y: -0.00000020861623, z: -0.70424986, w: 0.70995224}
+      scale: {x: 1.0000001, y: 0.99999976, z: 1}
+    - name: Finger1_R_Bone
+      parentName: Root_Bone
+      position: {x: -0.26818573, y: -0.068567865, z: 0.14446318}
+      rotation: {x: -0.5906515, y: 0.38875553, z: 0.39350605, w: 0.58749723}
+      scale: {x: 0.9999995, y: 0.9999995, z: 1.0000002}
+    - name: Finger2_R_Bone
+      parentName: Root_Bone
+      position: {x: -0.1735002, y: -0.06780426, z: 0.17016445}
+      rotation: {x: -0.51357687, y: 0.48604402, z: 0.49016893, w: 0.50964147}
+      scale: {x: 1.0000004, y: 1, z: 1.0000006}
+    - name: Finger3_R_Bone
+      parentName: Root_Bone
+      position: {x: -0.0071239374, y: -0.066462494, z: 0.13634709}
+      rotation: {x: -0.45497173, y: 0.5412955, z: 0.5449466, w: 0.4505919}
+      scale: {x: 1.0000002, y: 1.0000002, z: 0.99999994}
+    - name: Tail1_Bone
+      parentName: Root_Bone
+      position: {x: 0.070632115, y: -0.010451736, z: 0.0000000047683715}
+      rotation: {x: 0.000000014173565, y: 0.00000009685755, z: 0.9823702, w: 0.18694621}
+      scale: {x: 1.0000001, y: 1.0000006, z: 1}
+    - name: Tail2_Bone
+      parentName: Tail1_Bone
+      position: {x: -0.10948995, y: 0.000000076293944, z: 0.000000009536743}
+      rotation: {x: -0, y: -0.000000021420421, z: 0.14132167, w: 0.98996377}
+      scale: {x: 1.0000001, y: 0.9999997, z: 1}
+    - name: Finger1_L_Bone
+      parentName: Root_Bone
+      position: {x: -0.26818573, y: -0.068567865, z: -0.1419872}
+      rotation: {x: 0.3887554, y: 0.59065163, z: -0.5874971, w: 0.39350626}
+      scale: {x: -1, y: -0.9999998, z: -0.99999964}
+    - name: Finger2_L_Bone
+      parentName: Root_Bone
+      position: {x: -0.17350009, y: -0.067804284, z: -0.16768844}
+      rotation: {x: -0.48604378, y: -0.51357704, z: 0.50964093, w: -0.49016953}
+      scale: {x: -1, y: -0.9999999, z: -0.9999998}
+    - name: Finger3_L_Bone
+      parentName: Root_Bone
+      position: {x: -0.0071239853, y: -0.06646253, z: -0.13387099}
+      rotation: {x: 0.5412955, y: 0.4549716, z: -0.45059162, w: 0.54494697}
+      scale: {x: -1.0000001, y: -1.0000001, z: -1.0000001}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.01
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

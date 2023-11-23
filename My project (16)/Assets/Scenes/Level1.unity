@@ -8367,6 +8367,7 @@ GameObject:
   - component: {fileID: 846927759}
   - component: {fileID: 846927758}
   - component: {fileID: 846927761}
+  - component: {fileID: 846927762}
   m_Layer: 6
   m_Name: Camera
   m_TagString: Untagged
@@ -8405,12 +8406,13 @@ MonoBehaviour:
   sensitivity: 500
   sensitivityMax: 2000
   Slider: {fileID: 6727643200998473154}
-  speed: 40
+  speed: 1000
   jumpkey: 32
   downkey: 304
   escape: 27
   canvas: {fileID: 597885904}
   incanvas: 0
+  rb: {fileID: 846927762}
 --- !u!81 &846927759
 AudioListener:
   m_ObjectHideFlags: 0
@@ -8475,6 +8477,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &846927762
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846927756}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &848626176
 GameObject:
   m_ObjectHideFlags: 0
