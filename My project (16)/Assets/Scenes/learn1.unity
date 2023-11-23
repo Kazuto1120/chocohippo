@@ -51388,7 +51388,7 @@ GameObject:
   - component: {fileID: 1570640355}
   - component: {fileID: 1570640359}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: robot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51465,8 +51465,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1570640354}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -123.9, y: 15.3, z: 164.6}
-  m_LocalScale: {x: 21.851887, y: 17.32327, z: 16.740744}
+  m_LocalPosition: {x: -123.9, y: 5.3, z: 164.6}
+  m_LocalScale: {x: 7.5937495, y: 9.059233, z: 7.062046}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 918457542}
@@ -51497,7 +51497,7 @@ MonoBehaviour:
   - {fileID: 642550781}
   - {fileID: 1035894020}
   - {fileID: 841108354}
-  speed: 2
+  speed: 7
   goBack: 1
 --- !u!1001 &1573087465
 PrefabInstance:
