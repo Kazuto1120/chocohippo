@@ -33,6 +33,11 @@ After the start icon, the game will ask you to create a game or join a room.
 Click create and play the game.
 
 
+Press ESC to go to Menu:
+![image](https://github.com/Kazuto1120/chocohippo/assets/57959207/e87abff9-8e5e-4a8b-a6eb-3010a86e5a85)
+
+
+
 Project Contributors:
 Zixian Lin (Project Leader)
 Andrew Gil (Game Developer and Designer)
