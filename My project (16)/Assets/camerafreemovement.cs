@@ -20,6 +20,7 @@ public class camerafreemovement : MonoBehaviour
     public KeyCode escape = KeyCode.Escape;
     public GameObject canvas;
     public bool incanvas;
+    public Rigidbody rb;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,7 +45,8 @@ public class camerafreemovement : MonoBehaviour
         { move();}
         if (Input.GetKey(jumpkey))
         {
-            transform.position += Vector3.up * speed*Time.deltaTime;
+            rb.AddForce(transform.up * speed *Time.deltaTime);
+            
         }
         if (Input.GetKey(downkey))
         {
@@ -80,7 +82,7 @@ public class camerafreemovement : MonoBehaviour
         yRotation += mouseX;
         transform.localRotation = Quaternion.Euler(xRotation, yRotation, 0f);
         Vector3 move = transform.right * x + transform.forward * y;
-        transform.position += move * Time.deltaTime * speed;
+        rb.AddForce(move*speed*Time.deltaTime);
     }
     public void back()
     {
