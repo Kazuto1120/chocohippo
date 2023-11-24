@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 7a73bf5f1f49dbf429a73bf7b066b3d3, type: 2}
+--- !u!114 &521695923 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5961652947982462127, guid: 0b6960451bb3d9b4fbb11479c9a99bb2, type: 3}
+  m_PrefabInstance: {fileID: 1060061120}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &614321832 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 593ecfc9b4ebe8f4ba5da8ddcae29138, type: 3}
@@ -670,7 +681,7 @@ GameObject:
   - component: {fileID: 1483476583}
   - component: {fileID: 1483476582}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: enemy4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -752,11 +763,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   walkpoint: {x: 0, y: 0, z: 0}
-  attack: {fileID: 0}
+  attack: {fileID: 1673119800}
   timebetweenattacks: 0
   damage: 10
   bounceForce: 2
   walkrange: 500
+  view: {fileID: 0}
+  slider: {fileID: 521695923}
 --- !u!4 &1483476581
 Transform:
   m_ObjectHideFlags: 0

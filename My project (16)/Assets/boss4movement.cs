@@ -28,6 +28,8 @@ public class boss4movement : MonoBehaviour
     bool iding = false;
     bool walkPointset;
     public float walkrange;
+    public PhotonView view;
+    public Slider slider;
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -36,6 +38,8 @@ public class boss4movement : MonoBehaviour
     {
         look = lookRadius;
         health = maxhealth;
+        view = GetComponent<PhotonView>();
+        slider.maxValue = health;
     }
     private void Update()
     {
@@ -175,6 +179,32 @@ public class boss4movement : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         GetComponent<Rigidbody>().velocity = Vector3.zero;
+    }
+    public void takedamage(float x)
+    {
+        view.RPC("takedamage2", RpcTarget.AllBuffered, x);
+    }
+    [PunRPC]
+    private void takedamage2(float x)
+    {
+        lookRadius = lookRadius * 5;
+        Debug.Log(x);
+        health = health - x;
+        view.RPC("sethealth", RpcTarget.AllBuffered);
+        if (health <= 0)
+        {
+            StartCoroutine(DestroyAfterDelay(2f));
+        }
+    }
+    [PunRPC]
+    private void sethealth()
+    {
+        slider.value = health;
+    }
+    private IEnumerator DestroyAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        PhotonNetwork.Destroy(gameObject);
     }
     private void OnDrawGizmosSelected()
     {
