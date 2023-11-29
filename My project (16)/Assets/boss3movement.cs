@@ -11,6 +11,7 @@ public class boss3movement : MonoBehaviour
     bool playerInsightRange, playerinattackrange;
     Collider playercharacter;
     public AudioSource audio;
+    public Animator animatior2;
 
     public PhotonView view;
     public float maxhealth = 1000;
@@ -270,6 +271,7 @@ public class boss3movement : MonoBehaviour
         {
             animator.SetTrigger("dead");
             audio.Play();
+            animatior2.SetTrigger("boss");
             StartCoroutine(DestroyAfterDelay(2f));
         }
         

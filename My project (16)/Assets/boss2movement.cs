@@ -10,6 +10,7 @@ public class boss2movement : MonoBehaviour
     public float lookRadius, look, attackRadius;
     bool playerInsightRange, playerinattackrange;
     Collider playercharacter;
+    
 
     public PhotonView view;
     public float maxhealth = 1000;
@@ -27,6 +28,7 @@ public class boss2movement : MonoBehaviour
     public Animator animator;
     public Animator animatortwo;
     public AudioSource audio;
+    
 
     private float idle2Chance = 0.25f;
     private float timeBetweenIdle2Checks = 1.0f;
@@ -165,6 +167,7 @@ public class boss2movement : MonoBehaviour
     {
         alreadyattack = false;
     }
+    
     private void Searchwalkpoint()
     {
 
@@ -192,6 +195,7 @@ public class boss2movement : MonoBehaviour
         GetComponent<Rigidbody>().AddForce(bounceDirection * bounceForce, ForceMode.Impulse);
         StartCoroutine(StopBounceForce());
     }
+
     private IEnumerator StopBounceForce()
     {
         yield return new WaitForSeconds(0.5f);
@@ -205,6 +209,7 @@ public class boss2movement : MonoBehaviour
     [PunRPC]
     private void takedamage2(float x)
     {
+        
         lookRadius = lookRadius * 5;
         Debug.Log(x);
         health = health - x;

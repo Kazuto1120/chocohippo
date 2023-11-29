@@ -13,6 +13,11 @@ public class boss4movement : MonoBehaviour
     public float maxhealth = 1000;
     public float health = 100;
     public NavMeshAgent agent;
+    public Animator animator;
+    public bool shell;
+    float storage;
+    public float test;
+    public AudioSource audio;
 
     public LayerMask ground, playerlayer;
 
@@ -40,6 +45,7 @@ public class boss4movement : MonoBehaviour
         health = maxhealth;
         view = GetComponent<PhotonView>();
         slider.maxValue = health;
+        view.RPC("sethealth", RpcTarget.AllBuffered);
     }
     private void Update()
     {
@@ -69,8 +75,20 @@ public class boss4movement : MonoBehaviour
                 idle2();
             }
         }
-
-        if (!playerInsightRange && !playerinattackrange)
+        if (shell)
+        {
+            animator.SetBool("shell", true);
+        }
+        else
+        {
+            animator.SetBool("shell", false);
+        }
+        if (shell && !alreadyattack)
+        {
+            alreadyattack = true;
+            shellin();
+        }
+        else if (!playerInsightRange && !playerinattackrange)
         {
 
             Patrolling();
@@ -84,6 +102,19 @@ public class boss4movement : MonoBehaviour
         {
             attackPlayer();
         }
+    }
+    private void shellin()
+    {
+        agent.SetDestination(transform.position);
+        health += (maxhealth / 50);
+        if (health > maxhealth)
+        {
+            health = maxhealth;
+        }
+        view.RPC("sethealth", RpcTarget.AllBuffered);
+        Invoke(nameof(resetattack), 1f);
+
+
     }
     private void Patrolling()
     {
@@ -103,6 +134,7 @@ public class boss4movement : MonoBehaviour
         {
             agent.SetDestination(walkpoint);
             transform.LookAt(walkpoint);
+            animator.SetBool("move", true);
         }
         else
         {
@@ -117,30 +149,41 @@ public class boss4movement : MonoBehaviour
     }
     private void chasePlayer()
     {
-
-        agent.SetDestination(playercharacter.transform.position);
+        Vector3 a = new Vector3(0, test, 0);
+        animator.SetBool("move", true);
+        agent.SetDestination(playercharacter.transform.position + a);
         transform.LookAt(playercharacter.transform.position);
 
     }
     private void attackPlayer()
     {
+        animator.SetBool("move", false);
+        animator.SetTrigger("attack");
         agent.SetDestination(transform.position);
         transform.LookAt(playercharacter.transform.position);
         if (!alreadyattack)
         {
+            Debug.Log("run");
             alreadyattack = true;
-            attack.GetComponent<enemyattack>().shoot(playercharacter);
+            Collider[] players = Physics.OverlapSphere(attack.transform.position, attackRadius, playerlayer);
+            for (int i = 0; i < players.Length; ++i)
+            {
+                
+                players[i].GetComponent<playerMovement>().Takedamage(damage);
+                players[i] = null;
+            }
             Invoke(nameof(resetattack), timebetweenattacks);
         }
     }
     private void idle()
     {
         iding = true;
+        animator.SetBool("move", false);
 
     }
     private void idle2()
     {
-
+        animator.SetTrigger("switch");
         Invoke(nameof(Searchwalkpoint), 2f);
     }
     private void resetattack()
@@ -161,6 +204,10 @@ public class boss4movement : MonoBehaviour
 
         }
 
+    }
+    private void resetshell()
+    {
+        shell = false;
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -187,12 +234,29 @@ public class boss4movement : MonoBehaviour
     [PunRPC]
     private void takedamage2(float x)
     {
+        storage += x;
+        if (storage >= maxhealth / 20 && Random.Range(0, 10) >= 8)
+        {
+            storage = 0;
+            shell = true;
+            Invoke(nameof(resetshell), 5f);
+
+        }
+        else
+        {
+            storage = 0;
+        }
         lookRadius = lookRadius * 5;
         Debug.Log(x);
-        health = health - x;
-        view.RPC("sethealth", RpcTarget.AllBuffered);
+        if (!shell)
+        {
+            health = health - x;
+            view.RPC("sethealth", RpcTarget.AllBuffered);
+        }
         if (health <= 0)
         {
+            animator.SetTrigger("dead");
+            audio.Play();
             StartCoroutine(DestroyAfterDelay(2f));
         }
     }

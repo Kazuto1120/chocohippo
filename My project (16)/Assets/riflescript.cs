@@ -99,6 +99,11 @@ public class riflescript : MonoBehaviourPunCallbacks
                 {
                     boss3.takedamage(damage);
                 }
+                boss4movement boss4 = hit.transform.GetComponent<boss4movement>();
+                if (boss4 != null)
+                {
+                    boss4.takedamage(damage);
+                }
                 minion temp = hit.transform.GetComponent<minion>();
                 if (temp != null)
                 {
