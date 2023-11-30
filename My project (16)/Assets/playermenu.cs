@@ -67,6 +67,19 @@ public class playermenu : MonoBehaviour
         }
         SceneManager.LoadScene("lobby");
     }
+    public void info()
+    {
+        Invoke(nameof(back3), 1f);
+    }
+    private void back3()
+    {
+        if (PhotonNetwork.IsConnected)
+        {
+            PhotonNetwork.LeaveRoom();
+            Cursor.lockState = CursorLockMode.None;
+        }
+        SceneManager.LoadScene("Level1");
+    }
     public void add(float x)
     {
         player.sensitivity += x;
