@@ -154,5 +154,10 @@ public class playerMovement : MonoBehaviour
         SceneManager.LoadScene("gameover");
         Destroy(gameObject);
     }
+    public void newD()
+    {
+        fade.SetTrigger("dead");
+        PhotonNetwork.Destroy(gameObject);
+    }
 
 }

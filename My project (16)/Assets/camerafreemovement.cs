@@ -48,12 +48,12 @@ public class camerafreemovement : MonoBehaviour
             rb.AddForce(transform.up * speed *Time.deltaTime);
             
         }
-        if (Input.GetKey(downkey))
-        {
-            transform.position -= Vector3.up * speed * Time.deltaTime;
-        }
         if (Input.GetKeyDown(escape))
         switchmenu();
+        if(mouseX == 0 && mouseY == 0)
+        {
+            
+        }
     }
     public void switchmenu()
     {

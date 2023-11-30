@@ -216,6 +216,10 @@ public class boss4movement : MonoBehaviour
         {
             collision.gameObject.GetComponent<takedamage>().Takedamage(damage);
         }
+        if (collision.gameObject.layer == 11)
+        {
+            Searchwalkpoint();
+        }
 
         Vector3 bounceDirection = (transform.position - collision.contacts[0].point).normalized;
         GetComponent<Rigidbody>().AddForce(bounceDirection * bounceForce, ForceMode.Impulse);
