@@ -28,6 +28,7 @@ Table Content:
 
 After the start icon, the game will ask you to create a game or join a room.
 ![image](https://github.com/Kazuto1120/chocohippo/assets/57959207/43df1169-72f2-4538-9561-8fb4c1d06262)
+
 The icon 'i' will take you to an educational scene.
 
 
