@@ -1626,7 +1626,7 @@ GameObject:
   - component: {fileID: 1491763265}
   - component: {fileID: 1490993263}
   - component: {fileID: 1489994415}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: HeartRoom_door2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1648,7 +1648,7 @@ GameObject:
   - component: {fileID: 1491934308}
   - component: {fileID: 1491934311}
   - component: {fileID: 1491934310}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: HeartRoom_doorSnap1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1687,7 +1687,7 @@ GameObject:
   - component: {fileID: 1490993251}
   - component: {fileID: 1489994403}
   - component: {fileID: 1055999372}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: HeartRoom_doorSnap2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1751,7 +1751,7 @@ GameObject:
   - component: {fileID: 1489994409}
   - component: {fileID: 1491901133}
   - component: {fileID: 1491901131}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1767,7 +1767,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1491763275}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: HeartRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1785,7 +1785,7 @@ GameObject:
   - component: {fileID: 1491763279}
   - component: {fileID: 1490993261}
   - component: {fileID: 1489994413}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: HeartRoom_door1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1892,7 +1892,7 @@ GameObject:
   - component: {fileID: 1866426800}
   - component: {fileID: 1865296752}
   - component: {fileID: 1863136026}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: HeartRoom001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2445,7 +2445,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh40480
+  m_Name: pb_Mesh60902
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2620,7 +2620,7 @@ PrefabInstance:
       objectReference: {fileID: 8713316435153976537}
     - target: {fileID: 1867461088926380401, guid: f3085fcf9d2e2f140980855fbd4e208d, type: 3}
       propertyPath: maxhealth
-      value: 1
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 1867461088926380401, guid: f3085fcf9d2e2f140980855fbd4e208d, type: 3}
       propertyPath: animatortwo

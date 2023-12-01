@@ -231,16 +231,56 @@ PrefabInstance:
     m_TransformParent: {fileID: 1843914547}
     m_Modifications:
     - target: {fileID: 100000, guid: 2f61df2460680474caed9ba40e544b29, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2f61df2460680474caed9ba40e544b29, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 2f61df2460680474caed9ba40e544b29, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 2f61df2460680474caed9ba40e544b29, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 2f61df2460680474caed9ba40e544b29, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 2f61df2460680474caed9ba40e544b29, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 2f61df2460680474caed9ba40e544b29, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 2f61df2460680474caed9ba40e544b29, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 2f61df2460680474caed9ba40e544b29, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 2f61df2460680474caed9ba40e544b29, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: 2f61df2460680474caed9ba40e544b29, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 2f61df2460680474caed9ba40e544b29, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100018, guid: 2f61df2460680474caed9ba40e544b29, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 100018, guid: 2f61df2460680474caed9ba40e544b29, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -249,6 +289,14 @@ PrefabInstance:
     - target: {fileID: 100020, guid: 2f61df2460680474caed9ba40e544b29, type: 3}
       propertyPath: m_Name
       value: StomachRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 100020, guid: 2f61df2460680474caed9ba40e544b29, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100022, guid: 2f61df2460680474caed9ba40e544b29, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 100022, guid: 2f61df2460680474caed9ba40e544b29, type: 3}
       propertyPath: m_StaticEditorFlags
