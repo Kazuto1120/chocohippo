@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class nextmap : MonoBehaviour
+public class nextmap : MonoBehaviourPunCallbacks
 {
     public string name;
     public LayerMask playerlayer;
@@ -15,15 +15,9 @@ public class nextmap : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        Debug.Log(other.name);
-        
-        Collider[] playerCollider = Physics.OverlapSphere(transform.position, 100000, playerlayer);
-        for (int i = 0; i < playerCollider.Length; ++i)
+        if (PhotonNetwork.IsMasterClient)
         {
-            playerCollider[i].GetComponent<playerMovement>().newD();
+            PhotonNetwork.LoadLevel(name);
         }
-        
-        PhotonNetwork.LoadLevel(name);
-
     }
 }
