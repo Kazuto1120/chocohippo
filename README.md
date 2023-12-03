@@ -61,4 +61,4 @@ Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-at
 
 Music by <a href="https://pixabay.com/users/paulyudin-27739282/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=157045">Pavel Bekirov</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=157045">Pixabay</a>
 
-Videnovik, Maja, et al. “Game-Based Learning in Computer Science Education: A Scoping Literature Review - International Journal of STEM Education.” SpringerOpen, Springer International Publishing, 6 Sept. 2023, stemeducationjournal.springeropen.com/articles/10.1186/s40594-023-00447-2.
+Research study from Videnovik, Maja, et al. “Game-Based Learning in Computer Science Education: A Scoping Literature Review - International Journal of STEM Education.” SpringerOpen, Springer International Publishing, 6 Sept. 2023, stemeducationjournal.springeropen.com/articles/10.1186/s40594-023-00447-2.
