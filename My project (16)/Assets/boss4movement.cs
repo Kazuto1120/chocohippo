@@ -18,6 +18,7 @@ public class boss4movement : MonoBehaviour
     float storage;
     public float test;
     public AudioSource audio;
+    public Animator animator2;
 
     public LayerMask ground, playerlayer;
 
@@ -260,6 +261,7 @@ public class boss4movement : MonoBehaviour
         if (health <= 0)
         {
             animator.SetTrigger("dead");
+            animator2.SetTrigger("bossroom");
             audio.Play();
             StartCoroutine(DestroyAfterDelay(2f));
         }
