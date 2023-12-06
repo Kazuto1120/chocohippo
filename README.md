@@ -57,7 +57,19 @@ Youtube.com and unity.com
 
 Music by <a href="https://pixabay.com/users/geoffharvey-9096471/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=150605">Geoff Harvey</a> from <a href="https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=150605">Pixabay</a>
 
-Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=46215">Pixabay</a>
+Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=46215">Pixabay</a> and <a href=https://assetstore.unity.com/packages/audio/sound-fx/sci-fi-guns-sfx-pack-181144>Mikael Vanninen</a>
+
+boss model and animation by <a href="https://assetstore.unity.com/publishers/4595">PolyNext</a>
+
+gun model by <a href="https://assetstore.unity.com/publishers/55826">iltaen</a>
+
+enviroment model by <a href="https://assetstore.unity.com/packages/templates/tutorials/unity-learn-creator-kit-fps-urp-149310">Unity Technologies</a>
+
+UI button by <a href="https://assetstore.unity.com/packages/2d/gui/icons/game-gui-buttons-96277">Rizwan Ashraf</a>
+
+partical effect by <a href="https://assetstore.unity.com/packages/vfx/particles/particle-pack-127325">Unity Technologies</a>
+
+gun model by <a href="https://assetstore.unity.com/publishers/55826">iltaen</a>
 
 Music by <a href="https://pixabay.com/users/paulyudin-27739282/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=157045">Pavel Bekirov</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=157045">Pixabay</a>
 
