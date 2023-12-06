@@ -82,6 +82,10 @@ public class weaponswitch : MonoBehaviourPunCallbacks
     public void addreload(int x)
     {
         reloadleft += x;
+        if (reloadleft > 5)
+        {
+            reloadleft = 5;
+        }
         reloadupdate();
     }
     public void reloadupdate()

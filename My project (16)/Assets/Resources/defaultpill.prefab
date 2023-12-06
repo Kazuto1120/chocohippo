@@ -92,6 +92,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3896394779743267198, guid: 98a66c6d084747040958734ae3b781bb, type: 3}
+      propertyPath: heal
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3896394779743267198, guid: 98a66c6d084747040958734ae3b781bb, type: 3}
       propertyPath: time
       value: 30
       objectReference: {fileID: 0}

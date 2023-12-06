@@ -10,6 +10,7 @@ public class pill : MonoBehaviour
     public GameObject image;
     public PhotonView view;
     public Collider another;
+    public float heal;
     private void OnTriggerEnter(Collider other)
     {
         if (activate && other.CompareTag("Player"))
@@ -29,7 +30,7 @@ public class pill : MonoBehaviour
         Debug.Log("player2");
         activate = false;
         image.SetActive(false);
-        another.GetComponent<playerMovement>().Takedamage(-50);
+        another.GetComponent<playerMovement>().Takedamage(heal);
         Invoke(nameof(Reset), time);
     }
     [PunRPC]
