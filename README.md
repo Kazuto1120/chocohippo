@@ -61,7 +61,9 @@ Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-at
 
 boss model and animation by <a href="https://assetstore.unity.com/publishers/4595">PolyNext</a>
 
-gun model by <a href="[https://assetstore.unity.com/publishers/4595](https://assetstore.unity.com/packages/3d/props/weapons/lowpoly-scifi-guns-by-iltaen-209780)">iltaen</a>
+gun model by <a href="https://assetstore.unity.com/publishers/55826">iltaen</a>
+
+enviroment model by <a href="https://assetstore.unity.com/packages/templates/tutorials/unity-learn-creator-kit-fps-urp-149310">Unity Technologies</a>
 
 Music by <a href="https://pixabay.com/users/paulyudin-27739282/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=157045">Pavel Bekirov</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=157045">Pixabay</a>
 
