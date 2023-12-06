@@ -239,6 +239,8 @@ public class boss4movement : MonoBehaviour
     [PunRPC]
     private void takedamage2(float x)
     {
+        if (lookRadius < look * 6)
+            lookRadius = lookRadius * 5;
         storage += x;
         if (storage >= maxhealth / 20 && Random.Range(0, 10) >= 8)
         {

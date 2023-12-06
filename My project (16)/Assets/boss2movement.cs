@@ -213,7 +213,7 @@ public class boss2movement : MonoBehaviour
     [PunRPC]
     private void takedamage2(float x)
     {
-        
+        if(lookRadius< look*6)
         lookRadius = lookRadius * 5;
         Debug.Log(x);
         health = health - x;

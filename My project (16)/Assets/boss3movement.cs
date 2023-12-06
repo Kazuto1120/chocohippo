@@ -265,6 +265,7 @@ public class boss3movement : MonoBehaviour
     [PunRPC]
     private void takedamage2(float x)
     {
+        if(lookRadius < look * 6)
         lookRadius = lookRadius * 5;
         health = health - x;
         

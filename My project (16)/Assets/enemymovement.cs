@@ -227,7 +227,8 @@ public class enemymovement : MonoBehaviour
     [PunRPC]
     private void takedamage2(float x)
     {
-        lookRadius = lookRadius * 5;
+        if (lookRadius < look * 6)
+            lookRadius = lookRadius * 5;
         Debug.Log(x);
         health = health - x;
         tempD += x;
