@@ -552,7 +552,7 @@ MonoBehaviour:
   maxX: 250
   minZ: -250
   maxZ: 250
-  y: 14.5
+  y: 0
   amount: 5
 --- !u!4 &593782565
 Transform:
