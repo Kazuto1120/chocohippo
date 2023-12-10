@@ -8,7 +8,7 @@ public class RBCmovement : MonoBehaviour
     public float distance = 5.0f;
     public float offset = 0.0f;
     public GameObject temp;
-    // Start is called before the first frame update
+
 
     private float originalX;
     void Start()
@@ -16,20 +16,16 @@ public class RBCmovement : MonoBehaviour
         originalX = transform.position.x;
     }
 
-    // Update is called once per frame
     void Update()
     {
         float xPosition = originalX + Mathf.Sin(Time.time * speed + offset) * distance;
 
-        // Set the GameObject's position
         transform.position = new Vector3(xPosition, transform.position.y, transform.position.z);
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("test1");
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("test");
             temp = collision.collider.transform.parent.gameObject;
             collision.collider.transform.parent.SetParent(transform);
         }
