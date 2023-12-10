@@ -10,11 +10,7 @@ public class MoveArray : MonoBehaviour
     public List<GameObject> waypoints;
     public float speed = 2;
     public bool goBack = true;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
 
     // Update is called once per frame
     void Update()
