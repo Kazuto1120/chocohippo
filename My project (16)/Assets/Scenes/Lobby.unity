@@ -1582,7 +1582,7 @@ MonoBehaviour:
   joinInput: {fileID: 1638302901}
   animator: {fileID: 1420012489}
   audio: {fileID: 846097684}
-  name: runandgun
+  name: map
 --- !u!4 &846097683
 Transform:
   m_ObjectHideFlags: 0
