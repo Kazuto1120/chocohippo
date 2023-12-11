@@ -234,7 +234,7 @@ public class enemymovement : MonoBehaviour
         tempD += x;
         if (tempD >= 200)
         {
-            if (0 > Random.RandomRange(-30, 10) && health <= maxhealth / 2)
+            if (0 > Random.RandomRange(-30, 10) && health <= maxhealth / 2&&tempD<5)
             {
         totalminion += 1;
             }
