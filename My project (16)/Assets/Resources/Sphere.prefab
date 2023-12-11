@@ -134,8 +134,10 @@ MonoBehaviour:
     m_Bits: 640
   bounce: 1
   gravity: 1
-  damage: 1
+  damage: 0.2
   range: 10
+  exploded: 0
+  count: 0
   maxCollision: 5
   lifetime: 5
   playerCollide: 1
