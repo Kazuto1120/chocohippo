@@ -1733,7 +1733,7 @@ MonoBehaviour:
   damage: 2
   bounceForce: 30
   view: {fileID: 7335185612347493070}
-  health: 100
+  health: 10
   slider: {fileID: 7335185611484209108}
   agent: {fileID: 0}
   ground:

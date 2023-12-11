@@ -232,9 +232,9 @@ public class enemymovement : MonoBehaviour
         Debug.Log(x);
         health = health - x;
         tempD += x;
-        if (tempD >= 75)
+        if (tempD >= 200)
         {
-            if (0 > Random.RandomRange(-10, 10) && health <= maxhealth / 2)
+            if (0 > Random.RandomRange(-30, 10) && health <= maxhealth / 2)
             {
         totalminion += 1;
             }
