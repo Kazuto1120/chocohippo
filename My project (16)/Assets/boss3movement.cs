@@ -48,6 +48,7 @@ public class boss3movement : MonoBehaviour
 
     private void Awake()
     {
+        if(PhotonNetwork.MasterClient)
         agent = GetComponent<NavMeshAgent>();
     }
     private void Start()
@@ -63,6 +64,12 @@ public class boss3movement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!PhotonNetwork.IsMasterClient)
+        {
+            return;
+        }
+
+        
         if (bury)
         {
             particle.gameObject.SetActive(true);
