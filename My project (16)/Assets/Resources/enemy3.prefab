@@ -127,8 +127,8 @@ MonoBehaviour:
   animatortwo: {fileID: 0}
   walkpoint: {x: 0, y: 0, z: 0}
   walkrange: 150
-  timebetweenattacks: 4
-  damage: 10
+  timebetweenattacks: 8
+  damage: 1
   bounceForce: 2
   bury: 0
   speed: 20
