@@ -527,7 +527,7 @@ MonoBehaviour:
   playerInsightRange: 0
   rotatespeed: 6
   explosion: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  damage: 2
+  damage: 1
   range: 60
   lifetime: 10
 --- !u!114 &1116884714778751095

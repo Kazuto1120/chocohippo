@@ -1434,12 +1434,16 @@ PrefabInstance:
       objectReference: {fileID: 1677446039}
     - target: {fileID: 4828086408300698894, guid: c6bd16cf3620d2541b2f10fc0bde2d13, type: 3}
       propertyPath: maxhealth
-      value: 6000
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 4828086408300698894, guid: c6bd16cf3620d2541b2f10fc0bde2d13, type: 3}
       propertyPath: animatortwo
       value: 
       objectReference: {fileID: 1452151874}
+    - target: {fileID: 4828086408300698894, guid: c6bd16cf3620d2541b2f10fc0bde2d13, type: 3}
+      propertyPath: timebetweenattacks
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6bd16cf3620d2541b2f10fc0bde2d13, type: 3}
 --- !u!1 &1677446038 stripped
