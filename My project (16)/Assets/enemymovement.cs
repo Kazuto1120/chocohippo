@@ -236,7 +236,7 @@ public class enemymovement : MonoBehaviour
         {
             if (0 > Random.RandomRange(-10, 10) && health <= maxhealth / 2)
             {
-                GetComponent<enemymovement>().totalminion += 1;
+        totalminion += 1;
             }
             tempD = 0;
         }
