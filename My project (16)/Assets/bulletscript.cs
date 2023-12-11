@@ -50,7 +50,6 @@ public class bulletscript : MonoBehaviour
         minionspawn temp = GetComponent<minionspawn>();
         if (temp != null && count == 0)
         {
-            Debug.Log("code run");
             count = 1;
             exploded = true;
             temp.Spawn();
