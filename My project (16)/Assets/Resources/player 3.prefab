@@ -52931,7 +52931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 302afbbb8ce969a4aae18e614a97098a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 11
+  damage: 20
   range: 40
   firerate: 2
   bullet: 50
@@ -53149,7 +53149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 15
-  range: 140
+  range: 180
   firerate: 5
   bullet: 40
   maxSpread: 0.1
@@ -53388,7 +53388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 13
-  range: 60
+  range: 80
   firerate: 15
   bullet: 30
   maxSpread: 0.2

@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d24a7b08970534441a89a6fff7e52279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 30
+  time: 20
   image: {fileID: 3460816517021628765}
   view: {fileID: 7545881085294440920}
   another: {fileID: 0}
