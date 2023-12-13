@@ -1,8 +1,8 @@
 date, objective/work done, hours
 8/30,Find group and discuss plan for project,1.5 hours
 08/31,fill out project proposal with group members,2 hour
-09/02,studied c# ,2 hours
-09/04,"watch video on basics of unity, how to work the UI and play with unity.",3 hours
+09/02,studied c# ,5 hours
+09/04,"watch video on basics of unity, how to work the UI and play with unity.", 4 hours
 09/06,meet up with project supervisor and discuss our goal for this video game project.,2 hours
 09/08,draft of design document,2.5 hours
 09/11,design document finalization and submission,2 hours
@@ -10,8 +10,8 @@ date, objective/work done, hours
 09/14,watch a video on  Event Handling in Unity,2 hours
 09/15,Understand Unity's physics system/experiment with Rigidbody components.Learn about UI elements and canvas.,3 hours
 09/21,"discuss what we have learned and set up github desktop, discuss project",2 hours
-09/22,watch videos on introduction to probuilder and the user interface,1.5 hours
-09/24,brainstorm concepts for side maps in regards to the human body,1 hour
+09/22,watch videos on introduction to probuilder and the user interface,3.5 hours
+09/24,brainstorm concepts for side maps in regards to the human body,2 hour
 09/25,create a infinite vein map using probuilder and colliders and search textures to show group what I have in mind for final run,4 hours
 09/27,showcase work to rest of group and fix up,2.5 hour
 09/28,"try to commit my infinite vein to github, check in with group members",2.5 hours
@@ -22,7 +22,7 @@ date, objective/work done, hours
 10/08,Watch video to get better at making maps using probuilder and play with old map.,2.5 hours
 10/11,Run n gun concept from cuphead introduced into our game begin map building,2 hours
 10/13,fix materials for map and begin parkour mini mode,2 hours
-10/16,Practice presenting demo 1,1 hour
+10/16,Practice presenting demo 1,2 hours
 10/18,presenting Demo 1 and meeting with supervisor to display progress.,1.5 hours
 10/22,watch a video on how to make map move and try to implement,3 hours
 10/27,Polish up what i have for the side map and record it for groupmates,2 hours
@@ -31,7 +31,7 @@ date, objective/work done, hours
 11/02, play around with script for run and gun map see if i can make map move for parkour, 2 hours
 11/05, add more to the run and gun map as well as fix the flickering in level 1, 3 hours
 11/10, create movement script for objects in run and gun game, 2 hours
-11/11, create video for demo 2 and edit it, 1.5 hours
+11/11, create video for demo 2 and edit it, 2.5 hours
 11/12, group meeting + showcase and upload demo 2, 1.5 hours
 11/15, pipes flashing and camera render plus ends, 3 hours
 11/19, group meeting, 1.5 hours
