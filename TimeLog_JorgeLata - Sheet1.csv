@@ -26,13 +26,13 @@ Date,Time,Hours,Task completed,Next Step.
 9-27-2023,"9am-12pm,9pm-10pm",6,continue creating more gameobjects for the map and learning about multiplayer tools. Group meeting to share work,n/a.
 9-28-2023,9am-12pm,3,working on the 3D game and adding more content. merge the testing branch the main branch. Improving ReadMe file.,n/a.
 9-30-2023,9am-10pm,1,Discord meeting with group to create a demo for the project.,n/a.
-10-1-2023,9am-9:30am,30 min,Group meeting to discuss demo changes.,n/a.
+10-1-2023,9am-9:30am,0.5,Group meeting to discuss demo changes.,n/a.
 10-2-2023,7pm-7:30pm,1,recreating timelog and adding timelog file to the group's repository.,n/a.
 10-6-2023,8pm-10pm,2,fixing corrupted repository&recreating the project management board&creating UML diagram.,n/a.
 10-13-2023,5pm-8pm&8pm-10pm,5,working on the UML diagram and demo presentation.,n/a.
 10-15-2023,10pm-1am,3,adding moving gameobjects to the new scene established by lin.,n/a.
 10-16-2023,8am-9am,1,updating readme file and updating UML.,n/a.
-10-18-2023,10am-10:20am & 11am-11:30am,50 min,presenting Demo 1 and meeting with supervisor.,n/a.
+10-18-2023,10am-10:20am & 11am-11:30am,0.9,presenting Demo 1 and meeting with supervisor.,n/a.
 10-19-2023,9am-11am,2,research about multiplayer video games in unity.,n/a.
 10-21-2023,8pm-11pm,3,review the scripts and method multiplayer capability was implemented.,n/a.
 10-22-2023,9pm-1am,4,creating portal door in scene map and creating a building in the scene level1,check with team before merging my work to the main branch.
@@ -58,6 +58,6 @@ Date,Time,Hours,Task completed,Next Step.
 12-2-23,5pm-8pm & 9pm-11pm,5,planning for the end of the semester setting up final meetings with supervisor and group and sending emails to notify the group & made the learning map bigger and new buildings were created and C# script was created to make GermSlim object move,working on the final objectives of the project.
 12-3-2023,9pm-10pm,1,group meeting to discuss about the final slides and final demo and talk about what we going to do for the last days of the semester,planning to meet this thursday with the supervisor.
 12-9-2023,9am-1pm & 8pm-10pm,6,troubleshooting problem for Aida's character and improving the final presentation slides by rewriting it in the most formal way possible,continue working on the slides.
-12-10-2023,1pm-6pm & 9pm-11:30pm,7 hr and 30 min, group meeting to finish the demo and testing the game and continue working on the final slides and adding more features to the game,tomorrow we have the final meeting with supervisor and sending all the documents for evaluation.
+12-10-2023,1pm-6pm & 9pm-12pm,8, group meeting to finish the demo and testing the game and continue working on the final slides and adding more features to the game,tomorrow we have the final meeting with supervisor and sending all the documents for evaluation.
 12-11-2023,10am-11am & 1pm-6pm,6,last supervisor meeting with the entire group,finish the slides and submit the work.
 12-12-2023,8am-9am & 12pm-7pm,8, ask team for any necessary changes and fixing the slides writing and updating important information like github links and video link,notify the team about the submission.
