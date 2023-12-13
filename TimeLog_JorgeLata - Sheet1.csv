@@ -11,7 +11,7 @@ Date,Time,Hours,Task completed,Next Step.
 9-7-2023,9am-1pm,4,Reading how to create a design document and writing the first draft design document.,n/a.
 9-8-2023,9am-11am,2,Reading  Learn C# programming from tutorialspoint.,n/a.
 09-11-2023,2pm-4:00pm,2,Group meeting to create and change the final design document.,n/a.
-09-12-2023,9am-11:30am,2.5,Reading the unity manual document about the components and triggers.,n/a.
+09-12-2023,9am-12pm,3,Reading the unity manual document about the components and triggers.,n/a.
 09-13-2023,10am-2pm,4,Watch C# tutorial Helicoper 3D-CS50's intro to Game development from freecodeacademy,n/a.
 9-15,8am-5pm,9,learning how to use blender and studying c# fundamentals from online pages.,n/a.
 9-17-2023,9am-12pm,3,creating blender objects and creating a simple game in unity.,n/a.
@@ -26,13 +26,13 @@ Date,Time,Hours,Task completed,Next Step.
 9-27-2023,"9am-12pm,9pm-10pm",6,continue creating more gameobjects for the map and learning about multiplayer tools. Group meeting to share work,n/a.
 9-28-2023,9am-12pm,3,working on the 3D game and adding more content. merge the testing branch the main branch. Improving ReadMe file.,n/a.
 9-30-2023,9am-10pm,1,Discord meeting with group to create a demo for the project.,n/a.
-10-1-2023,9am-9:30am,30 min,Group meeting to discuss demo changes.,n/a.
+10-1-2023,9am-9:30am,0.5,Group meeting to discuss demo changes.,n/a.
 10-2-2023,7pm-7:30pm,1,recreating timelog and adding timelog file to the group's repository.,n/a.
 10-6-2023,8pm-10pm,2,fixing corrupted repository&recreating the project management board&creating UML diagram.,n/a.
 10-13-2023,5pm-8pm&8pm-10pm,5,working on the UML diagram and demo presentation.,n/a.
 10-15-2023,10pm-1am,3,adding moving gameobjects to the new scene established by lin.,n/a.
 10-16-2023,8am-9am,1,updating readme file and updating UML.,n/a.
-10-18-2023,10am-10:20am & 11am-11:30am,50 min,presenting Demo 1 and meeting with supervisor.,n/a.
+10-18-2023,10am-10:20am & 11am-11:30am,0.9,presenting Demo 1 and meeting with supervisor.,n/a.
 10-19-2023,9am-11am,2,research about multiplayer video games in unity.,n/a.
 10-21-2023,8pm-11pm,3,review the scripts and method multiplayer capability was implemented.,n/a.
 10-22-2023,9pm-1am,4,creating portal door in scene map and creating a building in the scene level1,check with team before merging my work to the main branch.
@@ -49,13 +49,15 @@ Date,Time,Hours,Task completed,Next Step.
 11-9-2023,7am-10am & 7pm-10pm,6,the connection problem was fixed by resetting  unity to default and extracting the most recent files from github & new problem arised from the enemymovement.cs & adding C# script to change the size of gameobjects,consult to project manager and google solutions. 
 11-12-2023,9pm-10pm,1,group meeting to complete demo2 video,review C# language
 11-14-2023,7pm-10pm,3,restore original map and rename it to learn1 and new building was added,add more game objects.
-11-19-2023,9pm-10pm,1,groupt meeting,creating another educational scene.
-11-22-2023,6pm-9pm,3,creating robot object and adding C# script to make the object move around and added chess board material and cube material,continue making moving robots.
+11-19-2023,9am-1pm & 9pm-10pm,5,group meeting,creating another educational scene in order to make the original learning map bigger.
+11-22-2023,4pm-9pm,5,creating robot object and adding C# script to make the object move around and added chess board material and cube material,continue making moving robots.
 11-24-2023,6pm-8pm,2,delete virus objects and search online how to add voice to the game,continue searching a way to add voice
 11-25-2023,6pm-8pm,2,attempt to add pun voice to the game but it failed due to unknown reason,ask project leader to create a voice app and send me the app id number.
-11-26-2023,9pm-10pm,1,group meeting to discuss the work done by every member,planning to do the final slides.
-11-30-2023,4pm-5pm & 8:45pm to 9:45pm,2,troubleshoot some game problem and testing multiplayer connection and writing a C# script to make message disappear after few seconds and a message was added to every map scene. ,fail to join the same map and planning to do some work for final slides.
-12-2-23,7pm-8pm & 9pm-11pm,3,planning for the end of the semester setting up final meetings with supervisor and group and sending emails to notify the group & made the learning map bigger and new buildings were created and C# script was created to make GermSlim object move,working on the final objectives of the project.
+11-26-2023,9am-1pm & 9pm-10pm,5,getting work ready for the meeting and deleting files from tha asset folder and group meeting to discuss the work done by every member,planning to do the final slides.
+11-30-2023,4pm-5pm & 9pm to 11pm,3,troubleshoot some game problem and testing multiplayer connection and writing a C# script to make message disappear after few seconds and a message was added to every map scene. ,fail to join the same map and planning to do some work for final slides.
+12-2-23,5pm-8pm & 9pm-11pm,5,planning for the end of the semester setting up final meetings with supervisor and group and sending emails to notify the group & made the learning map bigger and new buildings were created and C# script was created to make GermSlim object move,working on the final objectives of the project.
 12-3-2023,9pm-10pm,1,group meeting to discuss about the final slides and final demo and talk about what we going to do for the last days of the semester,planning to meet this thursday with the supervisor.
-12-9-2023,8pm-10pm,2,troubleshooting problem for Aida's character and improving the final presentation slides by rewriting it in the most formal way possible,continue working on the slides.
-12-10-2023,1pm-6pm & 9pm-11:30pm,7 hr and 30 min, group meeting to finish the demo and testing the game and continue working on the final slides and adding more features to the game,tomorrow we have the final meeting with supervisor and sending all the documents for evaluation.
+12-9-2023,9am-1pm & 8pm-10pm,6,troubleshooting problem for Aida's character and improving the final presentation slides by rewriting it in the most formal way possible,continue working on the slides.
+12-10-2023,1pm-6pm & 9pm-12pm,8, group meeting to finish the demo and testing the game and continue working on the final slides and adding more features to the game,tomorrow we have the final meeting with supervisor and sending all the documents for evaluation.
+12-11-2023,10am-11am & 1pm-6pm,6,last supervisor meeting with the entire group,finish the slides and submit the work.
+12-12-2023,8am-9am & 12pm-7pm,8, ask team for any necessary changes and fixing the slides writing and updating important information like github links and video link,notify the team about the submission.
